@@ -1,0 +1,107 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %meta{:content => "Neon Admin Panel", :name => "description"}/
+    %meta{:content => "", :name => "author"}/
+    %title Neon | Login
+    %link{:href => "assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/font-icons/entypo/css/entypo.css", :rel => "stylesheet"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic", :rel => "stylesheet"}/
+    %link{:href => "assets/css/bootstrap.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/neon-core.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/neon-theme.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/neon-forms.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/custom.css", :rel => "stylesheet"}/
+    %script{:src => "assets/js/jquery-1.11.0.min.js"}
+    /[if lt IE 9] <script src="assets/js/ie8-responsive-file-warning.js"></script>
+    / HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    /[if lt IE 9]
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  %body.page-body.login-page.login-form-fall{"data-url" => "http://neon.dev"}
+    / This is needed when you send requests via Ajax
+    :javascript
+      var baseurl = '';
+    .login-container
+      .login-header.login-caret
+        .login-content
+          %a.logo{:href => "index.html"}
+            %img{:alt => "", :src => "assets/images/logo@2x.png", :width => "120"}/
+          %p.description Dear user, log in to access the admin area!
+          / progress bar indicator
+          .login-progressbar-indicator
+            %h3 43%
+            %span logging in...
+      .login-progressbar
+        %div
+      .login-form
+        .login-content
+          .form-login-error
+            %h3 Invalid login
+            %p
+              Enter
+              = succeed "/" do
+                %strong demo
+              %strong demo
+              as login and password.
+          %form#form_login{:method => "post", :role => "form"}
+            .form-group
+              .input-group
+                .input-group-addon
+                  %i.entypo-user
+                %input#username.form-control{:autocomplete => "off", :name => "username", :placeholder => "Username", :type => "text"}/
+            .form-group
+              .input-group
+                .input-group-addon
+                  %i.entypo-key
+                %input#password.form-control{:autocomplete => "off", :name => "password", :placeholder => "Password", :type => "password"}/
+            .form-group
+              %button.btn.btn-primary.btn-block.btn-login{:type => "submit"}
+                Login In
+                %i.entypo-login
+            / Implemented in v1.1.4
+            .form-group
+              %em - or -
+            .form-group
+              %button.btn.btn-default.btn-lg.btn-block.btn-icon.icon-left.facebook-button{:type => "button"}
+                Login with Facebook
+                %i.entypo-facebook
+            /
+              You can also use other social network buttons
+              <div class="form-group">
+              
+              <button type="button" class="btn btn-default btn-lg btn-block btn-icon icon-left twitter-button">
+              Login with Twitter
+              <i class="entypo-twitter"></i>
+              </button>
+              
+              </div>
+              
+              <div class="form-group">
+              
+              <button type="button" class="btn btn-default btn-lg btn-block btn-icon icon-left google-button">
+              Login with Google+
+              <i class="entypo-gplus"></i>
+              </button>
+              
+              </div>
+          .login-bottom-links
+            %a.link{:href => "extra-forgot-password.html"} Forgot your password?
+            %br/
+            %a{:href => "#"} ToS
+            \-
+            %a{:href => "#"} Privacy Policy
+    / Bottom Scripts
+    %script{:src => "assets/js/gsap/main-gsap.js"}
+    %script{:src => "assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"}
+    %script{:src => "assets/js/bootstrap.js"}
+    %script{:src => "assets/js/joinable.js"}
+    %script{:src => "assets/js/resizeable.js"}
+    %script{:src => "assets/js/neon-api.js"}
+    %script{:src => "assets/js/jquery.validate.min.js"}
+    %script{:src => "assets/js/neon-login.js"}
+    %script{:src => "assets/js/neon-custom.js"}
+    %script{:src => "assets/js/neon-demo.js"}

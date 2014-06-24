@@ -1,0 +1,1342 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='Neon Admin Panel')
+    meta(name='author', content='')
+    title Neon | Glyph Icons
+    link(rel='stylesheet', href='assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css')
+    link(rel='stylesheet', href='assets/css/font-icons/entypo/css/entypo.css')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic')
+    link(rel='stylesheet', href='assets/css/bootstrap.css')
+    link(rel='stylesheet', href='assets/css/neon-core.css')
+    link(rel='stylesheet', href='assets/css/neon-theme.css')
+    link(rel='stylesheet', href='assets/css/neon-forms.css')
+    link(rel='stylesheet', href='assets/css/custom.css')
+    script(src='assets/js/jquery-1.11.0.min.js')
+    //if lt IE 9
+      script(src='assets/js/ie8-responsive-file-warning.js')
+    // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+  body.page-body(data-url='http://neon.dev')
+    .page-container
+      // add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always
+      .sidebar-menu
+        header.logo-env
+          // logo
+          .logo
+            a(href='index.html')
+              img(src='assets/images/logo@2x.png', width='120', alt='')
+          // logo collapse icon
+          .sidebar-collapse
+            a.sidebar-collapse-icon.with-animation(href='#')
+              // add class "with-animation" if you want sidebar to have animation during expanding/collapsing transition
+              i.entypo-menu
+          // open/close menu icon (do not remove if you want to enable menu on mobile devices)
+          .sidebar-mobile-menu.visible-xs
+            a.with-animation(href='#')
+              // add class "with-animation" to support animation
+              i.entypo-menu
+        ul#main-menu
+          // add class "multiple-expanded" to allow multiple submenus to open
+          // class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active"
+          // Search Bar
+          li#search
+            form(method='get', action='')
+              input.search-input(type='text', name='q', placeholder='Search something...')
+              button(type='submit')
+                i.entypo-search
+          li
+            a(href='index.html')
+              i.entypo-gauge
+              span Dashboard
+            ul
+              li
+                a(href='index.html')
+                  span Dashboard 1
+              li
+                a(href='dashboard-2.html')
+                  span Dashboard 2
+              li
+                a(href='dashboard-3.html')
+                  span Dashboard 3
+                  span.badge.badge-secondary.badge-roundless New
+              li
+                a(href='skin-black.html')
+                  span Skins
+                ul
+                  li
+                    a(href='skin-black.html')
+                      span Black Skin
+                  li
+                    a(href='skin-white.html')
+                      span White Skin
+                  li
+                    a(href='skin-purple.html')
+                      span Purple Skin
+                  li
+                    a(href='skin-cafe.html')
+                      span Cafe Skin
+                  li
+                    a(href='skin-red.html')
+                      span Red Skin
+                  li
+                    a(href='skin-green.html')
+                      span Green Skin
+                  li
+                    a(href='skin-yellow.html')
+                      span Yellow Skin
+                  li
+                    a(href='skin-blue.html')
+                      span Blue Skin
+              li
+                a(href='highlights.html')
+                  span What&apos;s New
+                  span.badge.badge-success.badge-roundless v1.5.1
+          li
+            a(href='layout-api.html')
+              i.entypo-layout
+              span Layouts
+            ul
+              li
+                a(href='layout-api.html')
+                  span Layout API
+                  span.badge.badge-warning.badge-roundless Updated
+              li
+                a(href='layout-collapsed-sidebar.html')
+                  span Collapsed Sidebar
+              li
+                a(href='layout-fixed-sidebar.html')
+                  span Fixed Sidebar
+              li
+                a(href='layout-chat-open.html')
+                  span Chat Open
+              li
+                a(href='layout-horizontal-menu-boxed.html')
+                  span Horizontal Menu Boxed
+              li
+                a(href='layout-horizontal-menu-fluid.html')
+                  span Horizontal Menu Fluid
+              li
+                a(href='layout-mixed-menus.html')
+                  span Mixed Menus
+              li
+                a(href='layout-right-sidebar.html')
+                  span Right Sidebar
+                  span.badge.badge-secondary.badge-roundless New
+              li
+                a(href='layout-both-menus-right-sidebar.html')
+                  span Both Menus (Right Sidebar)
+                  span.badge.badge-secondary.badge-roundless New
+              li
+                a(href='layout-page-transition-fade.html')
+                  span Page Enter Transitions
+                ul
+                  li
+                    a(href='layout-page-transition-fade.html')
+                      span Fade Scale
+                  li
+                    a(href='layout-page-transition-left-in.html')
+                      span Left In
+                  li
+                    a(href='layout-page-transition-right-in.html')
+                      span Right In
+                  li
+                    a(href='layout-page-transition-fade-only.html')
+                      span Fade Only
+          li
+            a(href='index.html', target='_blank')
+              i.entypo-monitor
+              span Frontend
+              span.badge.badge-secondary.badge-roundless New
+          li
+            a(href='ui-panels.html')
+              i.entypo-newspaper
+              span UI Elements
+            ul
+              li
+                a(href='ui-panels.html')
+                  span Panels
+              li
+                a(href='ui-tiles.html')
+                  span Tiles
+              li
+                a(href='forms-buttons.html')
+                  span Buttons
+              li
+                a(href='ui-typography.html')
+                  span Typography
+              li
+                a(href='ui-tabs-accordions.html')
+                  span Tabs &amp; Accordions
+              li
+                a(href='ui-tooltips-popovers.html')
+                  span Tooltips &amp; Popovers
+              li
+                a(href='ui-navbars.html')
+                  span Navbars
+              li
+                a(href='ui-breadcrumbs.html')
+                  span Breadcrumbs
+              li
+                a(href='ui-badges-labels.html')
+                  span Badges &amp; Labels
+              li
+                a(href='ui-progress-bars.html')
+                  span Progress Bars
+              li
+                a(href='ui-modals.html')
+                  span Modals
+              li
+                a(href='ui-blockquotes.html')
+                  span Blockquotes
+              li
+                a(href='ui-alerts.html')
+                  span Alerts
+              li
+                a(href='ui-pagination.html')
+                  span Pagination
+          li
+            a(href='mailbox.html')
+              i.entypo-mail
+              span Mailbox
+              span.badge.badge-secondary 8
+            ul
+              li
+                a(href='mailbox.html')
+                  i.entypo-inbox
+                  span Inbox
+              li
+                a(href='mailbox-compose.html')
+                  i.entypo-pencil
+                  span Compose Message
+              li
+                a(href='mailbox-message.html')
+                  i.entypo-attach
+                  span View Message
+          li
+            a(href='forms-main.html')
+              i.entypo-doc-text
+              span Forms
+            ul
+              li
+                a(href='forms-main.html')
+                  span Basic Elements
+              li
+                a(href='forms-advanced.html')
+                  span Advanced Plugins
+                  span.badge.badge-warning.badge-roundless Updated
+              li
+                a(href='forms-wizard.html')
+                  span Form Wizard
+              li
+                a(href='forms-validation.html')
+                  span Data Validation
+              li
+                a(href='forms-masks.html')
+                  span Input Masks
+              li
+                a(href='forms-sliders.html')
+                  span Sliders
+              li
+                a(href='forms-file-upload.html')
+                  span File Upload
+              li
+                a(href='forms-wysiwyg.html')
+                  span Editors
+                  span.badge.badge-warning.badge-roundless Updated
+          li
+            a(href='tables-main.html')
+              i.entypo-window
+              span Tables
+            ul
+              li
+                a(href='tables-main.html')
+                  span Basic Tables
+              li
+                a(href='tables-datatable.html')
+                  span Data Tables
+                  span.badge.badge-warning.badge-roundless Updated
+          li.opened.active
+            a(href='extra-icons.html')
+              i.entypo-bag
+              span Extra
+              span.badge.badge-info.badge-roundless New Items
+            ul
+              li.opened.active
+                a(href='extra-icons.html')
+                  span Icons
+                  span.badge.badge-success 3
+                ul
+                  li
+                    a(href='extra-icons.html')
+                      span Font Awesome
+                  li
+                    a(href='extra-icons-entypo.html')
+                      span Entypo
+                  li.active
+                    a(href='extra-icons-glyphicons.html')
+                      span Glyph Icons
+              li
+                a(href='extra-portlets.html')
+                  span Portlets
+              li
+                a(href='extra-google-maps.html')
+                  span Maps
+                ul
+                  li
+                    a(href='extra-google-maps.html')
+                      span Google Maps
+                  li
+                    a(href='extra-vector-maps.html')
+                      span Vector Maps
+              li
+                a(href='extra-chat-api.html')
+                  span Chat API
+              li
+                a(href='extra-calendar.html')
+                  span Calendar
+              li
+                a(href='extra-notes.html')
+                  span Notes
+              li
+                a(href='extra-lockscreen.html')
+                  span Lockscreen
+              li
+                a(href='extra-login.html')
+                  span Login
+                  span.badge.badge-warning.badge-roundless Updated
+              li
+                a(href='extra-register.html')
+                  span Register
+                  span.badge.badge-secondary.badge-roundless New
+              li
+                a(href='extra-invoice.html')
+                  span Invoice
+              li
+                a(href='extra-gallery.html')
+                  span Gallery
+                ul
+                  li
+                    a(href='extra-gallery.html')
+                      span Albums
+                  li
+                    a(href='extra-gallery-single.html')
+                      span Single Album
+              li
+                a(href='extra-profile.html')
+                  span Profile
+              li
+                a(href='extra-404.html')
+                  span 404 Page
+              li
+                a(href='extra-blank-page.html')
+                  span Blank Page
+              li
+                a(href='extra-timeline.html')
+                  span Timeline
+              li
+                a(href='extra-timeline-centered.html')
+                  span Timeline Centered
+              li
+                a(href='extra-tocify.html')
+                  span Tocify
+              li
+                a(href='ui-notifications.html')
+                  span Notifications
+              li
+                a(href='extra-scrollbox.html')
+                  span Scrollbox
+              li
+                a(href='extra-image-crop.html')
+                  span Image Crop
+              li
+                a(href='extra-search.html')
+                  span Search Page
+                  span.badge.badge-secondary.badge-roundless New
+              li
+                a(href='extra-language-selector.html')
+                  span Language Selector
+                  span.badge.badge-secondary.badge-roundless New
+          li
+            a(href='charts.html')
+              i.entypo-chart-bar
+              span Charts
+          li
+            a(href='#')
+              i.entypo-flow-tree
+              span Menu Levels
+            ul
+              li
+                a(href='#')
+                  i.entypo-flow-line
+                  span Menu Level 1.1
+              li
+                a(href='#')
+                  i.entypo-flow-line
+                  span Menu Level 1.2
+              li
+                a(href='#')
+                  i.entypo-flow-line
+                  span Menu Level 1.3
+                ul
+                  li
+                    a(href='#')
+                      i.entypo-flow-parallel
+                      span Menu Level 2.1
+                  li
+                    a(href='#')
+                      i.entypo-flow-parallel
+                      span Menu Level 2.2
+                    ul
+                      li
+                        a(href='#')
+                          i.entypo-flow-cascade
+                          span Menu Level 3.1
+                        ul
+                          li
+                            a(href='#')
+                              i.entypo-flow-branch
+                              span Menu Level 4.1
+                      li
+                        a(href='#')
+                          i.entypo-flow-cascade
+                          span Menu Level 3.2
+                  li
+                    a(href='#')
+                      i.entypo-flow-parallel
+                      span Menu Level 2.3
+      .main-content
+        ol.breadcrumb.bc-3
+          li
+            a(href='index.html')
+              i.entypo-home
+              | Home
+          li
+            a(href='extra-icons.html') Extra
+          li
+            a(href='extra-icons.html') Icons
+          li.active
+            strong Entypo
+        h1 Glyphicons Icon Set
+        em
+          | Includes 200 glyphs in font format from the Glyphicon Halflings set. Glyphicons Halflings are normally not available for free, but their creator has made them available for Bootstrap free of cost. As a thank you, we only ask that you to include a link back to Glyphicons whenever possible.
+        .row
+          .col-md-3
+            #toc
+          .col-md-9
+            .tocify-content
+              section#social
+                h2 Main Icons
+                .row.showcase-icon-list
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-asterisk
+                      |  glyphicon-asterisk
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-plus
+                      |  glyphicon-plus
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-euro
+                      |  glyphicon-euro
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-minus
+                      |  glyphicon-minus
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-cloud
+                      |  glyphicon-cloud
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-envelope
+                      |  glyphicon-envelope
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-pencil
+                      |  glyphicon-pencil
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-glass
+                      |  glyphicon-glass
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-music
+                      |  glyphicon-music
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-search
+                      |  glyphicon-search
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-heart
+                      |  glyphicon-heart
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-star
+                      |  glyphicon-star
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-star-empty
+                      |  glyphicon-star-empty
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-user
+                      |  glyphicon-user
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-film
+                      |  glyphicon-film
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-th-large
+                      |  glyphicon-th-large
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-th
+                      |  glyphicon-th
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-th-list
+                      |  glyphicon-th-list
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-ok
+                      |  glyphicon-ok
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-remove
+                      |  glyphicon-remove
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-zoom-in
+                      |  glyphicon-zoom-in
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-zoom-out
+                      |  glyphicon-zoom-out
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-off
+                      |  glyphicon-off
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-signal
+                      |  glyphicon-signal
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-cog
+                      |  glyphicon-cog
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-trash
+                      |  glyphicon-trash
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-home
+                      |  glyphicon-home
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-file
+                      |  glyphicon-file
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-time
+                      |  glyphicon-time
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-road
+                      |  glyphicon-road
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-download-alt
+                      |  glyphicon-download-alt
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-download
+                      |  glyphicon-download
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-upload
+                      |  glyphicon-upload
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-inbox
+                      |  glyphicon-inbox
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-play-circle
+                      |  glyphicon-play-circle
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-repeat
+                      |  glyphicon-repeat
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-refresh
+                      |  glyphicon-refresh
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-list-alt
+                      |  glyphicon-list-alt
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-lock
+                      |  glyphicon-lock
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-flag
+                      |  glyphicon-flag
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-headphones
+                      |  glyphicon-headphones
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-volume-off
+                      |  glyphicon-volume-off
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-volume-down
+                      |  glyphicon-volume-down
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-volume-up
+                      |  glyphicon-volume-up
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-qrcode
+                      |  glyphicon-qrcode
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-barcode
+                      |  glyphicon-barcode
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-tag
+                      |  glyphicon-tag
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-tags
+                      |  glyphicon-tags
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-book
+                      |  glyphicon-book
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-bookmark
+                      |  glyphicon-bookmark
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-print
+                      |  glyphicon-print
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-camera
+                      |  glyphicon-camera
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-font
+                      |  glyphicon-font
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-bold
+                      |  glyphicon-bold
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-italic
+                      |  glyphicon-italic
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-text-height
+                      |  glyphicon-text-height
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-text-width
+                      |  glyphicon-text-width
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-align-left
+                      |  glyphicon-align-left
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-align-center
+                      |  glyphicon-align-center
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-align-right
+                      |  glyphicon-align-right
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-align-justify
+                      |  glyphicon-align-justify
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-list
+                      |  glyphicon-list
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-indent-left
+                      |  glyphicon-indent-left
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-indent-right
+                      |  glyphicon-indent-right
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-facetime-video
+                      |  glyphicon-facetime-video
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-picture
+                      |  glyphicon-picture
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-map-marker
+                      |  glyphicon-map-marker
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-adjust
+                      |  glyphicon-adjust
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-tint
+                      |  glyphicon-tint
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-edit
+                      |  glyphicon-edit
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-share
+                      |  glyphicon-share
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-check
+                      |  glyphicon-check
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-move
+                      |  glyphicon-move
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-step-backward
+                      |  glyphicon-step-backward
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-fast-backward
+                      |  glyphicon-fast-backward
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-backward
+                      |  glyphicon-backward
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-play
+                      |  glyphicon-play
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-pause
+                      |  glyphicon-pause
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-stop
+                      |  glyphicon-stop
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-forward
+                      |  glyphicon-forward
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-fast-forward
+                      |  glyphicon-fast-forward
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-step-forward
+                      |  glyphicon-step-forward
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-eject
+                      |  glyphicon-eject
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-chevron-left
+                      |  glyphicon-chevron-left
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-chevron-right
+                      |  glyphicon-chevron-right
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-plus-sign
+                      |  glyphicon-plus-sign
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-minus-sign
+                      |  glyphicon-minus-sign
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-remove-sign
+                      |  glyphicon-remove-sign
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-ok-sign
+                      |  glyphicon-ok-sign
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-question-sign
+                      |  glyphicon-question-sign
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-info-sign
+                      |  glyphicon-info-sign
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-screenshot
+                      |  glyphicon-screenshot
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-remove-circle
+                      |  glyphicon-remove-circle
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-ok-circle
+                      |  glyphicon-ok-circle
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-ban-circle
+                      |  glyphicon-ban-circle
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-arrow-left
+                      |  glyphicon-arrow-left
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-arrow-right
+                      |  glyphicon-arrow-right
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-arrow-up
+                      |  glyphicon-arrow-up
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-arrow-down
+                      |  glyphicon-arrow-down
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-share-alt
+                      |  glyphicon-share-alt
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-resize-full
+                      |  glyphicon-resize-full
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-resize-small
+                      |  glyphicon-resize-small
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-exclamation-sign
+                      |  glyphicon-exclamation-sign
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-gift
+                      |  glyphicon-gift
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-leaf
+                      |  glyphicon-leaf
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-fire
+                      |  glyphicon-fire
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-eye-open
+                      |  glyphicon-eye-open
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-eye-close
+                      |  glyphicon-eye-close
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-warning-sign
+                      |  glyphicon-warning-sign
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-plane
+                      |  glyphicon-plane
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-calendar
+                      |  glyphicon-calendar
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-random
+                      |  glyphicon-random
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-comment
+                      |  glyphicon-comment
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-magnet
+                      |  glyphicon-magnet
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-chevron-up
+                      |  glyphicon-chevron-up
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-chevron-down
+                      |  glyphicon-chevron-down
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-retweet
+                      |  glyphicon-retweet
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-shopping-cart
+                      |  glyphicon-shopping-cart
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-folder-close
+                      |  glyphicon-folder-close
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-folder-open
+                      |  glyphicon-folder-open
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-resize-vertical
+                      |  glyphicon-resize-vertical
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-resize-horizontal
+                      |  glyphicon-resize-horizontal
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-hdd
+                      |  glyphicon-hdd
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-bullhorn
+                      |  glyphicon-bullhorn
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-bell
+                      |  glyphicon-bell
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-certificate
+                      |  glyphicon-certificate
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-thumbs-up
+                      |  glyphicon-thumbs-up
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-thumbs-down
+                      |  glyphicon-thumbs-down
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-hand-right
+                      |  glyphicon-hand-right
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-hand-left
+                      |  glyphicon-hand-left
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-hand-up
+                      |  glyphicon-hand-up
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-hand-down
+                      |  glyphicon-hand-down
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-circle-arrow-right
+                      |  glyphicon-circle-arrow-right
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-circle-arrow-left
+                      |  glyphicon-circle-arrow-left
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-circle-arrow-up
+                      |  glyphicon-circle-arrow-up
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-circle-arrow-down
+                      |  glyphicon-circle-arrow-down
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-globe
+                      |  glyphicon-globe
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-wrench
+                      |  glyphicon-wrench
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-tasks
+                      |  glyphicon-tasks
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-filter
+                      |  glyphicon-filter
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-briefcase
+                      |  glyphicon-briefcase
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-fullscreen
+                      |  glyphicon-fullscreen
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-dashboard
+                      |  glyphicon-dashboard
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-paperclip
+                      |  glyphicon-paperclip
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-heart-empty
+                      |  glyphicon-heart-empty
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-link
+                      |  glyphicon-link
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-phone
+                      |  glyphicon-phone
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-pushpin
+                      |  glyphicon-pushpin
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-usd
+                      |  glyphicon-usd
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-gbp
+                      |  glyphicon-gbp
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-sort
+                      |  glyphicon-sort
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-sort-by-alphabet
+                      |  glyphicon-sort-by-alphabet
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-sort-by-alphabet-alt
+                      |  glyphicon-sort-by-alphabet-alt
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-sort-by-order
+                      |  glyphicon-sort-by-order
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-sort-by-order-alt
+                      |  glyphicon-sort-by-order-alt
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-sort-by-attributes
+                      |  glyphicon-sort-by-attributes
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-sort-by-attributes-alt.{.&:before.{.content:(}='')
+                      |  glyphicon-sort-by-attributes-alt { &amp;:before { content: &quot;\e156&quot;; } }
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-unchecked
+                      |  glyphicon-unchecked
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-expand
+                      |  glyphicon-expand
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-collapse-down
+                      |  glyphicon-collapse-down
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-collapse-up
+                      |  glyphicon-collapse-up
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-log-in
+                      |  glyphicon-log-in
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-flash
+                      |  glyphicon-flash
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-log-out
+                      |  glyphicon-log-out
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-new-window
+                      |  glyphicon-new-window
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-record
+                      |  glyphicon-record
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-save
+                      |  glyphicon-save
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-open
+                      |  glyphicon-open
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-saved
+                      |  glyphicon-saved
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-import
+                      |  glyphicon-import
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-export
+                      |  glyphicon-export
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-send
+                      |  glyphicon-send
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-floppy-disk
+                      |  glyphicon-floppy-disk
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-floppy-saved
+                      |  glyphicon-floppy-saved
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-floppy-remove
+                      |  glyphicon-floppy-remove
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-floppy-save
+                      |  glyphicon-floppy-save
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-floppy-open
+                      |  glyphicon-floppy-open
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-credit-card
+                      |  glyphicon-credit-card
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-transfer
+                      |  glyphicon-transfer
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-cutlery
+                      |  glyphicon-cutlery
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-header
+                      |  glyphicon-header
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-compressed
+                      |  glyphicon-compressed
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-earphone
+                      |  glyphicon-earphone
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-phone-alt
+                      |  glyphicon-phone-alt
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-tower
+                      |  glyphicon-tower
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-stats
+                      |  glyphicon-stats
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-sd-video
+                      |  glyphicon-sd-video
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-hd-video
+                      |  glyphicon-hd-video
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-subtitles
+                      |  glyphicon-subtitles
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-sound-stereo
+                      |  glyphicon-sound-stereo
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-sound-dolby
+                      |  glyphicon-sound-dolby
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-sound-5-1
+                      |  glyphicon-sound-5-1
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-sound-6-1
+                      |  glyphicon-sound-6-1
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-sound-7-1
+                      |  glyphicon-sound-7-1
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-copyright-mark
+                      |  glyphicon-copyright-mark
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-registration-mark
+                      |  glyphicon-registration-mark
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-cloud-download
+                      |  glyphicon-cloud-download
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-cloud-upload
+                      |  glyphicon-cloud-upload
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-tree-conifer
+                      |  glyphicon-tree-conifer
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.glyphicon.glyphicon-tree-deciduous
+                      |  glyphicon-tree-deciduous
+        // Footer
+        footer.main
+          | &copy; 2014 
+          strong Neon
+          |  Admin Theme by 
+          a(href='http://laborator.co', target='_blank') Laborator
+      #chat.fixed(data-current-user='Art Ramadani', data-order-by-status='1', data-max-chat-history='25')
+        .chat-inner
+          h2.chat-header
+            a.chat-close(href='#', data-animate='1')
+              i.entypo-cancel
+            i.entypo-users
+            | &#x9;&#x9;&#x9;Chat
+            span.badge.badge-success.is-hidden 0
+          #group-1.chat-group
+            strong Favorites
+            a#sample-user-123(href='#', data-conversation-history='#sample_history')
+              span.user-status.is-online
+              em Catherine J. Watkins
+            a(href='#')
+              span.user-status.is-online
+              em Nicholas R. Walker
+            a(href='#')
+              span.user-status.is-busy
+              em Susan J. Best
+            a(href='#')
+              span.user-status.is-offline
+              em Brandon S. Young
+            a(href='#')
+              span.user-status.is-idle
+              em Fernando G. Olson
+          #group-2.chat-group
+            strong Work
+            a(href='#')
+              span.user-status.is-offline
+              em Robert J. Garcia
+            a(href='#', data-conversation-history='#sample_history_2')
+              span.user-status.is-offline
+              em Daniel A. Pena
+            a(href='#')
+              span.user-status.is-busy
+              em Rodrigo E. Lozano
+          #group-3.chat-group
+            strong Social
+            a(href='#')
+              span.user-status.is-busy
+              em Velma G. Pearson
+            a(href='#')
+              span.user-status.is-offline
+              em Margaret R. Dedmon
+            a(href='#')
+              span.user-status.is-online
+              em Kathleen M. Canales
+            a(href='#')
+              span.user-status.is-offline
+              em Tracy J. Rodriguez
+        // conversation template
+        .chat-conversation
+          .conversation-header
+            a.conversation-close(href='#')
+              i.entypo-cancel
+            span.user-status
+            span.display-name
+            small
+          ul.conversation-body
+          .chat-textarea
+            textarea.form-control.autogrow(placeholder='Type your message')
+      // Chat Histories
+      ul#sample_history.chat-history
+        li
+          span.user Art Ramadani
+          p Are you here?
+          span.time 09:00
+        li.opponent
+          span.user Catherine J. Watkins
+          p This message is pre-queued.
+          span.time 09:25
+        li.opponent
+          span.user Catherine J. Watkins
+          p Whohoo!
+          span.time 09:26
+        li.opponent.unread
+          span.user Catherine J. Watkins
+          p Do you like it?
+          span.time 09:27
+      // Chat Histories
+      ul#sample_history_2.chat-history
+        li.opponent.unread
+          span.user Daniel A. Pena
+          p I am going out.
+          span.time 08:21
+        li.opponent.unread
+          span.user Daniel A. Pena
+          p Call me when you see this message.
+          span.time 08:27
+    link(rel='stylesheet', href='assets/css/font-icons/font-awesome/css/font-awesome.min.css')
+    // Bottom Scripts
+    script(src='assets/js/gsap/main-gsap.js')
+    script(src='assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js')
+    script(src='assets/js/bootstrap.js')
+    script(src='assets/js/joinable.js')
+    script(src='assets/js/resizeable.js')
+    script(src='assets/js/neon-api.js')
+    script(src='assets/js/tocify/jquery.tocify.min.js')
+    script(src='assets/js/neon-chat.js')
+    script(src='assets/js/neon-custom.js')
+    script(src='assets/js/neon-demo.js')

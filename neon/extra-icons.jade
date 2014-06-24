@@ -1,0 +1,2436 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='Neon Admin Panel')
+    meta(name='author', content='')
+    title Neon | Extra
+    link(rel='stylesheet', href='assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css')
+    link(rel='stylesheet', href='assets/css/font-icons/entypo/css/entypo.css')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic')
+    link(rel='stylesheet', href='assets/css/bootstrap.css')
+    link(rel='stylesheet', href='assets/css/neon-core.css')
+    link(rel='stylesheet', href='assets/css/neon-theme.css')
+    link(rel='stylesheet', href='assets/css/neon-forms.css')
+    link(rel='stylesheet', href='assets/css/custom.css')
+    script(src='assets/js/jquery-1.11.0.min.js')
+    //if lt IE 9
+      script(src='assets/js/ie8-responsive-file-warning.js')
+    // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+  body.page-body(data-url='http://neon.dev')
+    .page-container
+      // add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always
+      .sidebar-menu
+        header.logo-env
+          // logo
+          .logo
+            a(href='index.html')
+              img(src='assets/images/logo@2x.png', width='120', alt='')
+          // logo collapse icon
+          .sidebar-collapse
+            a.sidebar-collapse-icon.with-animation(href='#')
+              // add class "with-animation" if you want sidebar to have animation during expanding/collapsing transition
+              i.entypo-menu
+          // open/close menu icon (do not remove if you want to enable menu on mobile devices)
+          .sidebar-mobile-menu.visible-xs
+            a.with-animation(href='#')
+              // add class "with-animation" to support animation
+              i.entypo-menu
+        ul#main-menu
+          // add class "multiple-expanded" to allow multiple submenus to open
+          // class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active"
+          // Search Bar
+          li#search
+            form(method='get', action='')
+              input.search-input(type='text', name='q', placeholder='Search something...')
+              button(type='submit')
+                i.entypo-search
+          li
+            a(href='index.html')
+              i.entypo-gauge
+              span Dashboard
+            ul
+              li
+                a(href='index.html')
+                  span Dashboard 1
+              li
+                a(href='dashboard-2.html')
+                  span Dashboard 2
+              li
+                a(href='dashboard-3.html')
+                  span Dashboard 3
+                  span.badge.badge-secondary.badge-roundless New
+              li
+                a(href='skin-black.html')
+                  span Skins
+                ul
+                  li
+                    a(href='skin-black.html')
+                      span Black Skin
+                  li
+                    a(href='skin-white.html')
+                      span White Skin
+                  li
+                    a(href='skin-purple.html')
+                      span Purple Skin
+                  li
+                    a(href='skin-cafe.html')
+                      span Cafe Skin
+                  li
+                    a(href='skin-red.html')
+                      span Red Skin
+                  li
+                    a(href='skin-green.html')
+                      span Green Skin
+                  li
+                    a(href='skin-yellow.html')
+                      span Yellow Skin
+                  li
+                    a(href='skin-blue.html')
+                      span Blue Skin
+              li
+                a(href='highlights.html')
+                  span What&apos;s New
+                  span.badge.badge-success.badge-roundless v1.5.1
+          li
+            a(href='layout-api.html')
+              i.entypo-layout
+              span Layouts
+            ul
+              li
+                a(href='layout-api.html')
+                  span Layout API
+                  span.badge.badge-warning.badge-roundless Updated
+              li
+                a(href='layout-collapsed-sidebar.html')
+                  span Collapsed Sidebar
+              li
+                a(href='layout-fixed-sidebar.html')
+                  span Fixed Sidebar
+              li
+                a(href='layout-chat-open.html')
+                  span Chat Open
+              li
+                a(href='layout-horizontal-menu-boxed.html')
+                  span Horizontal Menu Boxed
+              li
+                a(href='layout-horizontal-menu-fluid.html')
+                  span Horizontal Menu Fluid
+              li
+                a(href='layout-mixed-menus.html')
+                  span Mixed Menus
+              li
+                a(href='layout-right-sidebar.html')
+                  span Right Sidebar
+                  span.badge.badge-secondary.badge-roundless New
+              li
+                a(href='layout-both-menus-right-sidebar.html')
+                  span Both Menus (Right Sidebar)
+                  span.badge.badge-secondary.badge-roundless New
+              li
+                a(href='layout-page-transition-fade.html')
+                  span Page Enter Transitions
+                ul
+                  li
+                    a(href='layout-page-transition-fade.html')
+                      span Fade Scale
+                  li
+                    a(href='layout-page-transition-left-in.html')
+                      span Left In
+                  li
+                    a(href='layout-page-transition-right-in.html')
+                      span Right In
+                  li
+                    a(href='layout-page-transition-fade-only.html')
+                      span Fade Only
+          li
+            a(href='index.html', target='_blank')
+              i.entypo-monitor
+              span Frontend
+              span.badge.badge-secondary.badge-roundless New
+          li
+            a(href='ui-panels.html')
+              i.entypo-newspaper
+              span UI Elements
+            ul
+              li
+                a(href='ui-panels.html')
+                  span Panels
+              li
+                a(href='ui-tiles.html')
+                  span Tiles
+              li
+                a(href='forms-buttons.html')
+                  span Buttons
+              li
+                a(href='ui-typography.html')
+                  span Typography
+              li
+                a(href='ui-tabs-accordions.html')
+                  span Tabs &amp; Accordions
+              li
+                a(href='ui-tooltips-popovers.html')
+                  span Tooltips &amp; Popovers
+              li
+                a(href='ui-navbars.html')
+                  span Navbars
+              li
+                a(href='ui-breadcrumbs.html')
+                  span Breadcrumbs
+              li
+                a(href='ui-badges-labels.html')
+                  span Badges &amp; Labels
+              li
+                a(href='ui-progress-bars.html')
+                  span Progress Bars
+              li
+                a(href='ui-modals.html')
+                  span Modals
+              li
+                a(href='ui-blockquotes.html')
+                  span Blockquotes
+              li
+                a(href='ui-alerts.html')
+                  span Alerts
+              li
+                a(href='ui-pagination.html')
+                  span Pagination
+          li
+            a(href='mailbox.html')
+              i.entypo-mail
+              span Mailbox
+              span.badge.badge-secondary 8
+            ul
+              li
+                a(href='mailbox.html')
+                  i.entypo-inbox
+                  span Inbox
+              li
+                a(href='mailbox-compose.html')
+                  i.entypo-pencil
+                  span Compose Message
+              li
+                a(href='mailbox-message.html')
+                  i.entypo-attach
+                  span View Message
+          li
+            a(href='forms-main.html')
+              i.entypo-doc-text
+              span Forms
+            ul
+              li
+                a(href='forms-main.html')
+                  span Basic Elements
+              li
+                a(href='forms-advanced.html')
+                  span Advanced Plugins
+                  span.badge.badge-warning.badge-roundless Updated
+              li
+                a(href='forms-wizard.html')
+                  span Form Wizard
+              li
+                a(href='forms-validation.html')
+                  span Data Validation
+              li
+                a(href='forms-masks.html')
+                  span Input Masks
+              li
+                a(href='forms-sliders.html')
+                  span Sliders
+              li
+                a(href='forms-file-upload.html')
+                  span File Upload
+              li
+                a(href='forms-wysiwyg.html')
+                  span Editors
+                  span.badge.badge-warning.badge-roundless Updated
+          li
+            a(href='tables-main.html')
+              i.entypo-window
+              span Tables
+            ul
+              li
+                a(href='tables-main.html')
+                  span Basic Tables
+              li
+                a(href='tables-datatable.html')
+                  span Data Tables
+                  span.badge.badge-warning.badge-roundless Updated
+          li.active.opened.active.opened.active
+            a(href='extra-icons.html')
+              i.entypo-bag
+              span Extra
+              span.badge.badge-info.badge-roundless New Items
+            ul
+              li.active.opened.active
+                a(href='extra-icons.html')
+                  span Icons
+                  span.badge.badge-success 3
+                ul
+                  li.active
+                    a(href='extra-icons.html')
+                      span Font Awesome
+                  li
+                    a(href='extra-icons-entypo.html')
+                      span Entypo
+                  li
+                    a(href='extra-icons-glyphicons.html')
+                      span Glyph Icons
+              li
+                a(href='extra-portlets.html')
+                  span Portlets
+              li
+                a(href='extra-google-maps.html')
+                  span Maps
+                ul
+                  li
+                    a(href='extra-google-maps.html')
+                      span Google Maps
+                  li
+                    a(href='extra-vector-maps.html')
+                      span Vector Maps
+              li
+                a(href='extra-chat-api.html')
+                  span Chat API
+              li
+                a(href='extra-calendar.html')
+                  span Calendar
+              li
+                a(href='extra-notes.html')
+                  span Notes
+              li
+                a(href='extra-lockscreen.html')
+                  span Lockscreen
+              li
+                a(href='extra-login.html')
+                  span Login
+                  span.badge.badge-warning.badge-roundless Updated
+              li
+                a(href='extra-register.html')
+                  span Register
+                  span.badge.badge-secondary.badge-roundless New
+              li
+                a(href='extra-invoice.html')
+                  span Invoice
+              li
+                a(href='extra-gallery.html')
+                  span Gallery
+                ul
+                  li
+                    a(href='extra-gallery.html')
+                      span Albums
+                  li
+                    a(href='extra-gallery-single.html')
+                      span Single Album
+              li
+                a(href='extra-profile.html')
+                  span Profile
+              li
+                a(href='extra-404.html')
+                  span 404 Page
+              li
+                a(href='extra-blank-page.html')
+                  span Blank Page
+              li
+                a(href='extra-timeline.html')
+                  span Timeline
+              li
+                a(href='extra-timeline-centered.html')
+                  span Timeline Centered
+              li
+                a(href='extra-tocify.html')
+                  span Tocify
+              li
+                a(href='ui-notifications.html')
+                  span Notifications
+              li
+                a(href='extra-scrollbox.html')
+                  span Scrollbox
+              li
+                a(href='extra-image-crop.html')
+                  span Image Crop
+              li
+                a(href='extra-search.html')
+                  span Search Page
+                  span.badge.badge-secondary.badge-roundless New
+              li
+                a(href='extra-language-selector.html')
+                  span Language Selector
+                  span.badge.badge-secondary.badge-roundless New
+          li
+            a(href='charts.html')
+              i.entypo-chart-bar
+              span Charts
+          li
+            a(href='#')
+              i.entypo-flow-tree
+              span Menu Levels
+            ul
+              li
+                a(href='#')
+                  i.entypo-flow-line
+                  span Menu Level 1.1
+              li
+                a(href='#')
+                  i.entypo-flow-line
+                  span Menu Level 1.2
+              li
+                a(href='#')
+                  i.entypo-flow-line
+                  span Menu Level 1.3
+                ul
+                  li
+                    a(href='#')
+                      i.entypo-flow-parallel
+                      span Menu Level 2.1
+                  li
+                    a(href='#')
+                      i.entypo-flow-parallel
+                      span Menu Level 2.2
+                    ul
+                      li
+                        a(href='#')
+                          i.entypo-flow-cascade
+                          span Menu Level 3.1
+                        ul
+                          li
+                            a(href='#')
+                              i.entypo-flow-branch
+                              span Menu Level 4.1
+                      li
+                        a(href='#')
+                          i.entypo-flow-cascade
+                          span Menu Level 3.2
+                  li
+                    a(href='#')
+                      i.entypo-flow-parallel
+                      span Menu Level 2.3
+      .main-content
+        ol.breadcrumb.bc-3
+          li
+            a(href='index.html')
+              i.entypo-home
+              | Home
+          li
+            a(href='extra-icons.html') Extra
+          li
+            a(href='extra-icons.html') Icons
+          li.active
+            strong Font Awesome
+        h1 Font Awesome Icon Set
+        em
+          | Font Awesome gives you scalable vector icons that can instantly be customized &mdash; size, color, drop shadow, and anything that can be done with the power of CSS.
+        .row
+          .col-md-3
+            #toc
+          .col-md-9
+            .tocify-content
+              #new
+                h2 11 New Icons in 4.0
+                .row.showcase-icon-list
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-rub
+                      |  fa-rub
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-ruble
+                      |  fa-ruble 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-rouble
+                      |  fa-rouble 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-pagelines
+                      |  fa-pagelines
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-stack-exchange
+                      |  fa-stack-exchange
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-arrow-circle-o-right
+                      |  fa-arrow-circle-o-right
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-arrow-circle-o-left
+                      |  fa-arrow-circle-o-left
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-caret-square-o-left
+                      |  fa-caret-square-o-left
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-toggle-left
+                      |  fa-toggle-left 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-dot-circle-o
+                      |  fa-dot-circle-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-wheelchair
+                      |  fa-wheelchair
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-vimeo-square
+                      |  fa-vimeo-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-try
+                      |  fa-try
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-turkish-lira
+                      |  fa-turkish-lira 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-plus-square-o
+                      |  fa-plus-square-o
+              section#web-application
+                h2 Web Application Icons
+                .row.showcase-icon-list
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-adjust
+                      |  fa-adjust
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-anchor
+                      |  fa-anchor
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-archive
+                      |  fa-archive
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-arrows
+                      |  fa-arrows
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-arrows-h
+                      |  fa-arrows-h
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-arrows-v
+                      |  fa-arrows-v
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-asterisk
+                      |  fa-asterisk
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-ban
+                      |  fa-ban
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-bar-chart-o
+                      |  fa-bar-chart-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-barcode
+                      |  fa-barcode
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-bars
+                      |  fa-bars
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-beer
+                      |  fa-beer
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-bell
+                      |  fa-bell
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-bell-o
+                      |  fa-bell-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-bolt
+                      |  fa-bolt
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-book
+                      |  fa-book
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-bookmark
+                      |  fa-bookmark
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-bookmark-o
+                      |  fa-bookmark-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-briefcase
+                      |  fa-briefcase
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-bug
+                      |  fa-bug
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-building-o
+                      |  fa-building-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-bullhorn
+                      |  fa-bullhorn
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-bullseye
+                      |  fa-bullseye
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-calendar
+                      |  fa-calendar
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-calendar-o
+                      |  fa-calendar-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-camera
+                      |  fa-camera
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-camera-retro
+                      |  fa-camera-retro
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-caret-square-o-down
+                      |  fa-caret-square-o-down
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-caret-square-o-left
+                      |  fa-caret-square-o-left
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-caret-square-o-right
+                      |  fa-caret-square-o-right
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-caret-square-o-up
+                      |  fa-caret-square-o-up
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-certificate
+                      |  fa-certificate
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-check
+                      |  fa-check
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-check-circle
+                      |  fa-check-circle
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-check-circle-o
+                      |  fa-check-circle-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-check-square
+                      |  fa-check-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-check-square-o
+                      |  fa-check-square-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-circle
+                      |  fa-circle
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-circle-o
+                      |  fa-circle-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-clock-o
+                      |  fa-clock-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-cloud
+                      |  fa-cloud
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-cloud-download
+                      |  fa-cloud-download
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-cloud-upload
+                      |  fa-cloud-upload
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-code
+                      |  fa-code
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-code-fork
+                      |  fa-code-fork
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-coffee
+                      |  fa-coffee
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-cog
+                      |  fa-cog
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-cogs
+                      |  fa-cogs
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-comment
+                      |  fa-comment
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-comment-o
+                      |  fa-comment-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-comments
+                      |  fa-comments
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-comments-o
+                      |  fa-comments-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-compass
+                      |  fa-compass
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-credit-card
+                      |  fa-credit-card
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-crop
+                      |  fa-crop
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-crosshairs
+                      |  fa-crosshairs
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-cutlery
+                      |  fa-cutlery
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-dashboard
+                      |  fa-dashboard 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-desktop
+                      |  fa-desktop
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-dot-circle-o
+                      |  fa-dot-circle-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-download
+                      |  fa-download
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-edit
+                      |  fa-edit 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-ellipsis-h
+                      |  fa-ellipsis-h
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-ellipsis-v
+                      |  fa-ellipsis-v
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-envelope
+                      |  fa-envelope
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-envelope-o
+                      |  fa-envelope-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-eraser
+                      |  fa-eraser
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-exchange
+                      |  fa-exchange
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-exclamation
+                      |  fa-exclamation
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-exclamation-circle
+                      |  fa-exclamation-circle
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-exclamation-triangle
+                      |  fa-exclamation-triangle
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-external-link
+                      |  fa-external-link
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-external-link-square
+                      |  fa-external-link-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-eye
+                      |  fa-eye
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-eye-slash
+                      |  fa-eye-slash
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-female
+                      |  fa-female
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-fighter-jet
+                      |  fa-fighter-jet
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-film
+                      |  fa-film
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-filter
+                      |  fa-filter
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-fire
+                      |  fa-fire
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-fire-extinguisher
+                      |  fa-fire-extinguisher
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-flag
+                      |  fa-flag
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-flag-checkered
+                      |  fa-flag-checkered
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-flag-o
+                      |  fa-flag-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-flash
+                      |  fa-flash 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-flask
+                      |  fa-flask
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-folder
+                      |  fa-folder
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-folder-o
+                      |  fa-folder-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-folder-open
+                      |  fa-folder-open
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-folder-open-o
+                      |  fa-folder-open-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-frown-o
+                      |  fa-frown-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-gamepad
+                      |  fa-gamepad
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-gavel
+                      |  fa-gavel
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-gear
+                      |  fa-gear 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-gears
+                      |  fa-gears 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-gift
+                      |  fa-gift
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-glass
+                      |  fa-glass
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-globe
+                      |  fa-globe
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-group
+                      |  fa-group 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-hdd-o
+                      |  fa-hdd-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-headphones
+                      |  fa-headphones
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-heart
+                      |  fa-heart
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-heart-o
+                      |  fa-heart-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-home
+                      |  fa-home
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-inbox
+                      |  fa-inbox
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-info
+                      |  fa-info
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-info-circle
+                      |  fa-info-circle
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-key
+                      |  fa-key
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-keyboard-o
+                      |  fa-keyboard-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-laptop
+                      |  fa-laptop
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-leaf
+                      |  fa-leaf
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-legal
+                      |  fa-legal 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-lemon-o
+                      |  fa-lemon-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-level-down
+                      |  fa-level-down
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-level-up
+                      |  fa-level-up
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-lightbulb-o
+                      |  fa-lightbulb-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-location-arrow
+                      |  fa-location-arrow
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-lock
+                      |  fa-lock
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-magic
+                      |  fa-magic
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-magnet
+                      |  fa-magnet
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-mail-forward
+                      |  fa-mail-forward 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-mail-reply
+                      |  fa-mail-reply 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-mail-reply-all
+                      |  fa-mail-reply-all
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-male
+                      |  fa-male
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-map-marker
+                      |  fa-map-marker
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-meh-o
+                      |  fa-meh-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-microphone
+                      |  fa-microphone
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-microphone-slash
+                      |  fa-microphone-slash
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-minus
+                      |  fa-minus
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-minus-circle
+                      |  fa-minus-circle
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-minus-square
+                      |  fa-minus-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-minus-square-o
+                      |  fa-minus-square-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-mobile
+                      |  fa-mobile
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-mobile-phone
+                      |  fa-mobile-phone 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-money
+                      |  fa-money
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-moon-o
+                      |  fa-moon-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-music
+                      |  fa-music
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-pencil
+                      |  fa-pencil
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-pencil-square
+                      |  fa-pencil-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-pencil-square-o
+                      |  fa-pencil-square-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-phone
+                      |  fa-phone
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-phone-square
+                      |  fa-phone-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-picture-o
+                      |  fa-picture-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-plane
+                      |  fa-plane
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-plus
+                      |  fa-plus
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-plus-circle
+                      |  fa-plus-circle
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-plus-square
+                      |  fa-plus-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-plus-square-o
+                      |  fa-plus-square-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-power-off
+                      |  fa-power-off
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-print
+                      |  fa-print
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-puzzle-piece
+                      |  fa-puzzle-piece
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-qrcode
+                      |  fa-qrcode
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-question
+                      |  fa-question
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-question-circle
+                      |  fa-question-circle
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-quote-left
+                      |  fa-quote-left
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-quote-right
+                      |  fa-quote-right
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-random
+                      |  fa-random
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-refresh
+                      |  fa-refresh
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-reply
+                      |  fa-reply
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-reply-all
+                      |  fa-reply-all
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-retweet
+                      |  fa-retweet
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-road
+                      |  fa-road
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-rocket
+                      |  fa-rocket
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-rss
+                      |  fa-rss
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-rss-square
+                      |  fa-rss-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-search
+                      |  fa-search
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-search-minus
+                      |  fa-search-minus
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-search-plus
+                      |  fa-search-plus
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-share
+                      |  fa-share
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-share-square
+                      |  fa-share-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-share-square-o
+                      |  fa-share-square-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-shield
+                      |  fa-shield
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-shopping-cart
+                      |  fa-shopping-cart
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-sign-in
+                      |  fa-sign-in
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-sign-out
+                      |  fa-sign-out
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-signal
+                      |  fa-signal
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-sitemap
+                      |  fa-sitemap
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-smile-o
+                      |  fa-smile-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-sort
+                      |  fa-sort
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-sort-alpha-asc
+                      |  fa-sort-alpha-asc
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-sort-alpha-desc
+                      |  fa-sort-alpha-desc
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-sort-amount-asc
+                      |  fa-sort-amount-asc
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-sort-amount-desc
+                      |  fa-sort-amount-desc
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-sort-asc
+                      |  fa-sort-asc
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-sort-desc
+                      |  fa-sort-desc
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-sort-down
+                      |  fa-sort-down 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-sort-numeric-asc
+                      |  fa-sort-numeric-asc
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-sort-numeric-desc
+                      |  fa-sort-numeric-desc
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-sort-up
+                      |  fa-sort-up 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-spinner
+                      |  fa-spinner
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-square
+                      |  fa-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-square-o
+                      |  fa-square-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-star
+                      |  fa-star
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-star-half
+                      |  fa-star-half
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-star-half-empty
+                      |  fa-star-half-empty 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-star-half-full
+                      |  fa-star-half-full 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-star-half-o
+                      |  fa-star-half-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-star-o
+                      |  fa-star-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-subscript
+                      |  fa-subscript
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-suitcase
+                      |  fa-suitcase
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-sun-o
+                      |  fa-sun-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-superscript
+                      |  fa-superscript
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-tablet
+                      |  fa-tablet
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-tachometer
+                      |  fa-tachometer
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-tag
+                      |  fa-tag
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-tags
+                      |  fa-tags
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-tasks
+                      |  fa-tasks
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-terminal
+                      |  fa-terminal
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-thumb-tack
+                      |  fa-thumb-tack
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-thumbs-down
+                      |  fa-thumbs-down
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-thumbs-o-down
+                      |  fa-thumbs-o-down
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-thumbs-o-up
+                      |  fa-thumbs-o-up
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-thumbs-up
+                      |  fa-thumbs-up
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-ticket
+                      |  fa-ticket
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-times
+                      |  fa-times
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-times-circle
+                      |  fa-times-circle
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-times-circle-o
+                      |  fa-times-circle-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-tint
+                      |  fa-tint
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-toggle-down
+                      |  fa-toggle-down 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-toggle-left
+                      |  fa-toggle-left 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-toggle-right
+                      |  fa-toggle-right 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-toggle-up
+                      |  fa-toggle-up 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-trash-o
+                      |  fa-trash-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-trophy
+                      |  fa-trophy
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-truck
+                      |  fa-truck
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-umbrella
+                      |  fa-umbrella
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-unlock
+                      |  fa-unlock
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-unlock-alt
+                      |  fa-unlock-alt
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-unsorted
+                      |  fa-unsorted 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-upload
+                      |  fa-upload
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-user
+                      |  fa-user
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-users
+                      |  fa-users
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-video-camera
+                      |  fa-video-camera
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-volume-down
+                      |  fa-volume-down
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-volume-off
+                      |  fa-volume-off
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-volume-up
+                      |  fa-volume-up
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-warning
+                      |  fa-warning 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-wheelchair
+                      |  fa-wheelchair
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-wrench
+                      |  fa-wrench
+              section#form-control
+                h2 Form Control Icons
+                .row.showcase-icon-list
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-check-square
+                      |  fa-check-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-check-square-o
+                      |  fa-check-square-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-circle
+                      |  fa-circle
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-circle-o
+                      |  fa-circle-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-dot-circle-o
+                      |  fa-dot-circle-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-minus-square
+                      |  fa-minus-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-minus-square-o
+                      |  fa-minus-square-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-plus-square
+                      |  fa-plus-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-plus-square-o
+                      |  fa-plus-square-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-square
+                      |  fa-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-square-o
+                      |  fa-square-o
+              section#currency
+                h2 Currency Icons
+                .row.showcase-icon-list
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-bitcoin
+                      |  fa-bitcoin 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-btc
+                      |  fa-btc
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-cny
+                      |  fa-cny 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-dollar
+                      |  fa-dollar 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-eur
+                      |  fa-eur
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-euro
+                      |  fa-euro 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-gbp
+                      |  fa-gbp
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-inr
+                      |  fa-inr
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-jpy
+                      |  fa-jpy
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-krw
+                      |  fa-krw
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-money
+                      |  fa-money
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-rmb
+                      |  fa-rmb 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-rouble
+                      |  fa-rouble 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-rub
+                      |  fa-rub
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-ruble
+                      |  fa-ruble 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-rupee
+                      |  fa-rupee 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-try
+                      |  fa-try
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-turkish-lira
+                      |  fa-turkish-lira 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-usd
+                      |  fa-usd
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-won
+                      |  fa-won 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-yen
+                      |  fa-yen 
+                      span.text-muted (alias)
+              section#text-editor
+                h2 Text Editor Icons
+                .row.showcase-icon-list
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-align-center
+                      |  fa-align-center
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-align-justify
+                      |  fa-align-justify
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-align-left
+                      |  fa-align-left
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-align-right
+                      |  fa-align-right
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-bold
+                      |  fa-bold
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-chain
+                      |  fa-chain 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-chain-broken
+                      |  fa-chain-broken
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-clipboard
+                      |  fa-clipboard
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-columns
+                      |  fa-columns
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-copy
+                      |  fa-copy 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-cut
+                      |  fa-cut 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-dedent
+                      |  fa-dedent 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-eraser
+                      |  fa-eraser
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-file
+                      |  fa-file
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-file-o
+                      |  fa-file-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-file-text
+                      |  fa-file-text
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-file-text-o
+                      |  fa-file-text-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-files-o
+                      |  fa-files-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-floppy-o
+                      |  fa-floppy-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-font
+                      |  fa-font
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-indent
+                      |  fa-indent
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-italic
+                      |  fa-italic
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-link
+                      |  fa-link
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-list
+                      |  fa-list
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-list-alt
+                      |  fa-list-alt
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-list-ol
+                      |  fa-list-ol
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-list-ul
+                      |  fa-list-ul
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-outdent
+                      |  fa-outdent
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-paperclip
+                      |  fa-paperclip
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-paste
+                      |  fa-paste 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-repeat
+                      |  fa-repeat
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-rotate-left
+                      |  fa-rotate-left 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-rotate-right
+                      |  fa-rotate-right 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-save
+                      |  fa-save 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-scissors
+                      |  fa-scissors
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-strikethrough
+                      |  fa-strikethrough
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-table
+                      |  fa-table
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-text-height
+                      |  fa-text-height
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-text-width
+                      |  fa-text-width
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-th
+                      |  fa-th
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-th-large
+                      |  fa-th-large
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-th-list
+                      |  fa-th-list
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-underline
+                      |  fa-underline
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-undo
+                      |  fa-undo
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-unlink
+                      |  fa-unlink 
+                      span.text-muted (alias)
+              section#directional
+                h2 Directional Icons
+                .row.showcase-icon-list
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-angle-double-down
+                      |  fa-angle-double-down
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-angle-double-left
+                      |  fa-angle-double-left
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-angle-double-right
+                      |  fa-angle-double-right
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-angle-double-up
+                      |  fa-angle-double-up
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-angle-down
+                      |  fa-angle-down
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-angle-left
+                      |  fa-angle-left
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-angle-right
+                      |  fa-angle-right
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-angle-up
+                      |  fa-angle-up
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-arrow-circle-down
+                      |  fa-arrow-circle-down
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-arrow-circle-left
+                      |  fa-arrow-circle-left
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-arrow-circle-o-down
+                      |  fa-arrow-circle-o-down
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-arrow-circle-o-left
+                      |  fa-arrow-circle-o-left
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-arrow-circle-o-right
+                      |  fa-arrow-circle-o-right
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-arrow-circle-o-up
+                      |  fa-arrow-circle-o-up
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-arrow-circle-right
+                      |  fa-arrow-circle-right
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-arrow-circle-up
+                      |  fa-arrow-circle-up
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-arrow-down
+                      |  fa-arrow-down
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-arrow-left
+                      |  fa-arrow-left
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-arrow-right
+                      |  fa-arrow-right
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-arrow-up
+                      |  fa-arrow-up
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-arrows
+                      |  fa-arrows
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-arrows-alt
+                      |  fa-arrows-alt
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-arrows-h
+                      |  fa-arrows-h
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-arrows-v
+                      |  fa-arrows-v
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-caret-down
+                      |  fa-caret-down
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-caret-left
+                      |  fa-caret-left
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-caret-right
+                      |  fa-caret-right
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-caret-square-o-down
+                      |  fa-caret-square-o-down
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-caret-square-o-left
+                      |  fa-caret-square-o-left
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-caret-square-o-right
+                      |  fa-caret-square-o-right
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-caret-square-o-up
+                      |  fa-caret-square-o-up
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-caret-up
+                      |  fa-caret-up
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-chevron-circle-down
+                      |  fa-chevron-circle-down
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-chevron-circle-left
+                      |  fa-chevron-circle-left
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-chevron-circle-right
+                      |  fa-chevron-circle-right
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-chevron-circle-up
+                      |  fa-chevron-circle-up
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-chevron-down
+                      |  fa-chevron-down
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-chevron-left
+                      |  fa-chevron-left
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-chevron-right
+                      |  fa-chevron-right
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-chevron-up
+                      |  fa-chevron-up
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-hand-o-down
+                      |  fa-hand-o-down
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-hand-o-left
+                      |  fa-hand-o-left
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-hand-o-right
+                      |  fa-hand-o-right
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-hand-o-up
+                      |  fa-hand-o-up
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-long-arrow-down
+                      |  fa-long-arrow-down
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-long-arrow-left
+                      |  fa-long-arrow-left
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-long-arrow-right
+                      |  fa-long-arrow-right
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-long-arrow-up
+                      |  fa-long-arrow-up
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-toggle-down
+                      |  fa-toggle-down 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-toggle-left
+                      |  fa-toggle-left 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-toggle-right
+                      |  fa-toggle-right 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-toggle-up
+                      |  fa-toggle-up 
+                      span.text-muted (alias)
+              section#video-player
+                h2 Video Player Icons
+                .row.showcase-icon-list
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-arrows-alt
+                      |  fa-arrows-alt
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-backward
+                      |  fa-backward
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-compress
+                      |  fa-compress
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-eject
+                      |  fa-eject
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-expand
+                      |  fa-expand
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-fast-backward
+                      |  fa-fast-backward
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-fast-forward
+                      |  fa-fast-forward
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-forward
+                      |  fa-forward
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-pause
+                      |  fa-pause
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-play
+                      |  fa-play
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-play-circle
+                      |  fa-play-circle
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-play-circle-o
+                      |  fa-play-circle-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-step-backward
+                      |  fa-step-backward
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-step-forward
+                      |  fa-step-forward
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-stop
+                      |  fa-stop
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-youtube-play
+                      |  fa-youtube-play
+              section#brand
+                h2 Brand Icons
+                .alert.alert-success
+                  ul.margin-bottom-none.padding-left-lg
+                    li All brand icons are trademarks of their respective owners.
+                    li
+                      | The use of these trademarks does not indicate endorsement of the trademark holder by Font Awesome, nor vice versa.
+                .row.showcase-icon-list
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-adn
+                      |  fa-adn
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-android
+                      |  fa-android
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-apple
+                      |  fa-apple
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-bitbucket
+                      |  fa-bitbucket
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-bitbucket-square
+                      |  fa-bitbucket-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-bitcoin
+                      |  fa-bitcoin 
+                      span.text-muted (alias)
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-btc
+                      |  fa-btc
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-css3
+                      |  fa-css3
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-dribbble
+                      |  fa-dribbble
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-dropbox
+                      |  fa-dropbox
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-facebook
+                      |  fa-facebook
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-facebook-square
+                      |  fa-facebook-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-flickr
+                      |  fa-flickr
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-foursquare
+                      |  fa-foursquare
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-github
+                      |  fa-github
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-github-alt
+                      |  fa-github-alt
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-github-square
+                      |  fa-github-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-gittip
+                      |  fa-gittip
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-google-plus
+                      |  fa-google-plus
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-google-plus-square
+                      |  fa-google-plus-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-html5
+                      |  fa-html5
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-instagram
+                      |  fa-instagram
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-linkedin
+                      |  fa-linkedin
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-linkedin-square
+                      |  fa-linkedin-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-linux
+                      |  fa-linux
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-maxcdn
+                      |  fa-maxcdn
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-pagelines
+                      |  fa-pagelines
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-pinterest
+                      |  fa-pinterest
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-pinterest-square
+                      |  fa-pinterest-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-renren
+                      |  fa-renren
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-skype
+                      |  fa-skype
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-stack-exchange
+                      |  fa-stack-exchange
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-stack-overflow
+                      |  fa-stack-overflow
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-trello
+                      |  fa-trello
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-tumblr
+                      |  fa-tumblr
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-tumblr-square
+                      |  fa-tumblr-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-twitter
+                      |  fa-twitter
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-twitter-square
+                      |  fa-twitter-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-vimeo-square
+                      |  fa-vimeo-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-vk
+                      |  fa-vk
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-weibo
+                      |  fa-weibo
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-windows
+                      |  fa-windows
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-xing
+                      |  fa-xing
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-xing-square
+                      |  fa-xing-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-youtube
+                      |  fa-youtube
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-youtube-play
+                      |  fa-youtube-play
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-youtube-square
+                      |  fa-youtube-square
+              section#medical
+                h2 Medical Icons
+                .row.showcase-icon-list
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-ambulance
+                      |  fa-ambulance
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-h-square
+                      |  fa-h-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-hospital-o
+                      |  fa-hospital-o
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-medkit
+                      |  fa-medkit
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-plus-square
+                      |  fa-plus-square
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-stethoscope
+                      |  fa-stethoscope
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-user-md
+                      |  fa-user-md
+                  .icon-el.col-md-3.col-sm-4
+                    a(href='#')
+                      i.fa.fa-wheelchair
+                      |  fa-wheelchair
+        // Footer
+        footer.main
+          | &copy; 2014 
+          strong Neon
+          |  Admin Theme by 
+          a(href='http://laborator.co', target='_blank') Laborator
+      #chat.fixed(data-current-user='Art Ramadani', data-order-by-status='1', data-max-chat-history='25')
+        .chat-inner
+          h2.chat-header
+            a.chat-close(href='#', data-animate='1')
+              i.entypo-cancel
+            i.entypo-users
+            | &#x9;&#x9;&#x9;Chat
+            span.badge.badge-success.is-hidden 0
+          #group-1.chat-group
+            strong Favorites
+            a#sample-user-123(href='#', data-conversation-history='#sample_history')
+              span.user-status.is-online
+              em Catherine J. Watkins
+            a(href='#')
+              span.user-status.is-online
+              em Nicholas R. Walker
+            a(href='#')
+              span.user-status.is-busy
+              em Susan J. Best
+            a(href='#')
+              span.user-status.is-offline
+              em Brandon S. Young
+            a(href='#')
+              span.user-status.is-idle
+              em Fernando G. Olson
+          #group-2.chat-group
+            strong Work
+            a(href='#')
+              span.user-status.is-offline
+              em Robert J. Garcia
+            a(href='#', data-conversation-history='#sample_history_2')
+              span.user-status.is-offline
+              em Daniel A. Pena
+            a(href='#')
+              span.user-status.is-busy
+              em Rodrigo E. Lozano
+          #group-3.chat-group
+            strong Social
+            a(href='#')
+              span.user-status.is-busy
+              em Velma G. Pearson
+            a(href='#')
+              span.user-status.is-offline
+              em Margaret R. Dedmon
+            a(href='#')
+              span.user-status.is-online
+              em Kathleen M. Canales
+            a(href='#')
+              span.user-status.is-offline
+              em Tracy J. Rodriguez
+        // conversation template
+        .chat-conversation
+          .conversation-header
+            a.conversation-close(href='#')
+              i.entypo-cancel
+            span.user-status
+            span.display-name
+            small
+          ul.conversation-body
+          .chat-textarea
+            textarea.form-control.autogrow(placeholder='Type your message')
+      // Chat Histories
+      ul#sample_history.chat-history
+        li
+          span.user Art Ramadani
+          p Are you here?
+          span.time 09:00
+        li.opponent
+          span.user Catherine J. Watkins
+          p This message is pre-queued.
+          span.time 09:25
+        li.opponent
+          span.user Catherine J. Watkins
+          p Whohoo!
+          span.time 09:26
+        li.opponent.unread
+          span.user Catherine J. Watkins
+          p Do you like it?
+          span.time 09:27
+      // Chat Histories
+      ul#sample_history_2.chat-history
+        li.opponent.unread
+          span.user Daniel A. Pena
+          p I am going out.
+          span.time 08:21
+        li.opponent.unread
+          span.user Daniel A. Pena
+          p Call me when you see this message.
+          span.time 08:27
+    link(rel='stylesheet', href='assets/css/font-icons/font-awesome/css/font-awesome.min.css')
+    // Bottom Scripts
+    script(src='assets/js/gsap/main-gsap.js')
+    script(src='assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js')
+    script(src='assets/js/bootstrap.js')
+    script(src='assets/js/joinable.js')
+    script(src='assets/js/resizeable.js')
+    script(src='assets/js/neon-api.js')
+    script(src='assets/js/tocify/jquery.tocify.min.js')
+    script(src='assets/js/neon-chat.js')
+    script(src='assets/js/neon-custom.js')
+    script(src='assets/js/neon-demo.js')

@@ -1,0 +1,858 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %meta{:content => "Neon Admin Panel", :name => "description"}/
+    %meta{:content => "", :name => "author"}/
+    %title Neon | Timeline
+    %link{:href => "assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/font-icons/entypo/css/entypo.css", :rel => "stylesheet"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic", :rel => "stylesheet"}/
+    %link{:href => "assets/css/bootstrap.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/neon-core.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/neon-theme.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/neon-forms.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/custom.css", :rel => "stylesheet"}/
+    %script{:src => "assets/js/jquery-1.11.0.min.js"}
+    /[if lt IE 9] <script src="assets/js/ie8-responsive-file-warning.js"></script>
+    / HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    /[if lt IE 9]
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  %body.page-body{"data-url" => "http://neon.dev"}
+    .page-container
+      / add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always
+      .sidebar-menu
+        %header.logo-env
+          / logo
+          .logo
+            %a{:href => "index.html"}
+              %img{:alt => "", :src => "assets/images/logo@2x.png", :width => "120"}/
+          / logo collapse icon
+          .sidebar-collapse
+            %a.sidebar-collapse-icon.with-animation{:href => "#"}
+              / add class "with-animation" if you want sidebar to have animation during expanding/collapsing transition
+              %i.entypo-menu
+          / open/close menu icon (do not remove if you want to enable menu on mobile devices)
+          .sidebar-mobile-menu.visible-xs
+            %a.with-animation{:href => "#"}
+              / add class "with-animation" to support animation
+              %i.entypo-menu
+        %ul#main-menu
+          / add class "multiple-expanded" to allow multiple submenus to open
+          / class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active"
+          / Search Bar
+          %li#search
+            %form{:action => "", :method => "get"}
+              %input.search-input{:name => "q", :placeholder => "Search something...", :type => "text"}/
+              %button{:type => "submit"}
+                %i.entypo-search
+          %li
+            %a{:href => "index.html"}
+              %i.entypo-gauge
+              %span Dashboard
+            %ul
+              %li
+                %a{:href => "index.html"}
+                  %span Dashboard 1
+              %li
+                %a{:href => "dashboard-2.html"}
+                  %span Dashboard 2
+              %li
+                %a{:href => "dashboard-3.html"}
+                  %span Dashboard 3
+                  %span.badge.badge-secondary.badge-roundless New
+              %li
+                %a{:href => "skin-black.html"}
+                  %span Skins
+                %ul
+                  %li
+                    %a{:href => "skin-black.html"}
+                      %span Black Skin
+                  %li
+                    %a{:href => "skin-white.html"}
+                      %span White Skin
+                  %li
+                    %a{:href => "skin-purple.html"}
+                      %span Purple Skin
+                  %li
+                    %a{:href => "skin-cafe.html"}
+                      %span Cafe Skin
+                  %li
+                    %a{:href => "skin-red.html"}
+                      %span Red Skin
+                  %li
+                    %a{:href => "skin-green.html"}
+                      %span Green Skin
+                  %li
+                    %a{:href => "skin-yellow.html"}
+                      %span Yellow Skin
+                  %li
+                    %a{:href => "skin-blue.html"}
+                      %span Blue Skin
+              %li
+                %a{:href => "highlights.html"}
+                  %span What's New
+                  %span.badge.badge-success.badge-roundless v1.5.1
+          %li
+            %a{:href => "layout-api.html"}
+              %i.entypo-layout
+              %span Layouts
+            %ul
+              %li
+                %a{:href => "layout-api.html"}
+                  %span Layout API
+                  %span.badge.badge-warning.badge-roundless Updated
+              %li
+                %a{:href => "layout-collapsed-sidebar.html"}
+                  %span Collapsed Sidebar
+              %li
+                %a{:href => "layout-fixed-sidebar.html"}
+                  %span Fixed Sidebar
+              %li
+                %a{:href => "layout-chat-open.html"}
+                  %span Chat Open
+              %li
+                %a{:href => "layout-horizontal-menu-boxed.html"}
+                  %span Horizontal Menu Boxed
+              %li
+                %a{:href => "layout-horizontal-menu-fluid.html"}
+                  %span Horizontal Menu Fluid
+              %li
+                %a{:href => "layout-mixed-menus.html"}
+                  %span Mixed Menus
+              %li
+                %a{:href => "layout-right-sidebar.html"}
+                  %span Right Sidebar
+                  %span.badge.badge-secondary.badge-roundless New
+              %li
+                %a{:href => "layout-both-menus-right-sidebar.html"}
+                  %span Both Menus (Right Sidebar)
+                  %span.badge.badge-secondary.badge-roundless New
+              %li
+                %a{:href => "layout-page-transition-fade.html"}
+                  %span Page Enter Transitions
+                %ul
+                  %li
+                    %a{:href => "layout-page-transition-fade.html"}
+                      %span Fade Scale
+                  %li
+                    %a{:href => "layout-page-transition-left-in.html"}
+                      %span Left In
+                  %li
+                    %a{:href => "layout-page-transition-right-in.html"}
+                      %span Right In
+                  %li
+                    %a{:href => "layout-page-transition-fade-only.html"}
+                      %span Fade Only
+          %li
+            %a{:href => "index.html", :target => "_blank"}
+              %i.entypo-monitor
+              %span Frontend
+              %span.badge.badge-secondary.badge-roundless New
+          %li
+            %a{:href => "ui-panels.html"}
+              %i.entypo-newspaper
+              %span UI Elements
+            %ul
+              %li
+                %a{:href => "ui-panels.html"}
+                  %span Panels
+              %li
+                %a{:href => "ui-tiles.html"}
+                  %span Tiles
+              %li
+                %a{:href => "forms-buttons.html"}
+                  %span Buttons
+              %li
+                %a{:href => "ui-typography.html"}
+                  %span Typography
+              %li
+                %a{:href => "ui-tabs-accordions.html"}
+                  %span Tabs &amp; Accordions
+              %li
+                %a{:href => "ui-tooltips-popovers.html"}
+                  %span Tooltips &amp; Popovers
+              %li
+                %a{:href => "ui-navbars.html"}
+                  %span Navbars
+              %li
+                %a{:href => "ui-breadcrumbs.html"}
+                  %span Breadcrumbs
+              %li
+                %a{:href => "ui-badges-labels.html"}
+                  %span Badges &amp; Labels
+              %li
+                %a{:href => "ui-progress-bars.html"}
+                  %span Progress Bars
+              %li
+                %a{:href => "ui-modals.html"}
+                  %span Modals
+              %li
+                %a{:href => "ui-blockquotes.html"}
+                  %span Blockquotes
+              %li
+                %a{:href => "ui-alerts.html"}
+                  %span Alerts
+              %li
+                %a{:href => "ui-pagination.html"}
+                  %span Pagination
+          %li
+            %a{:href => "mailbox.html"}
+              %i.entypo-mail
+              %span Mailbox
+              %span.badge.badge-secondary 8
+            %ul
+              %li
+                %a{:href => "mailbox.html"}
+                  %i.entypo-inbox
+                  %span Inbox
+              %li
+                %a{:href => "mailbox-compose.html"}
+                  %i.entypo-pencil
+                  %span Compose Message
+              %li
+                %a{:href => "mailbox-message.html"}
+                  %i.entypo-attach
+                  %span View Message
+          %li
+            %a{:href => "forms-main.html"}
+              %i.entypo-doc-text
+              %span Forms
+            %ul
+              %li
+                %a{:href => "forms-main.html"}
+                  %span Basic Elements
+              %li
+                %a{:href => "forms-advanced.html"}
+                  %span Advanced Plugins
+                  %span.badge.badge-warning.badge-roundless Updated
+              %li
+                %a{:href => "forms-wizard.html"}
+                  %span Form Wizard
+              %li
+                %a{:href => "forms-validation.html"}
+                  %span Data Validation
+              %li
+                %a{:href => "forms-masks.html"}
+                  %span Input Masks
+              %li
+                %a{:href => "forms-sliders.html"}
+                  %span Sliders
+              %li
+                %a{:href => "forms-file-upload.html"}
+                  %span File Upload
+              %li
+                %a{:href => "forms-wysiwyg.html"}
+                  %span Editors
+                  %span.badge.badge-warning.badge-roundless Updated
+          %li
+            %a{:href => "tables-main.html"}
+              %i.entypo-window
+              %span Tables
+            %ul
+              %li
+                %a{:href => "tables-main.html"}
+                  %span Basic Tables
+              %li
+                %a{:href => "tables-datatable.html"}
+                  %span Data Tables
+                  %span.badge.badge-warning.badge-roundless Updated
+          %li.opened.active
+            %a{:href => "extra-icons.html"}
+              %i.entypo-bag
+              %span Extra
+              %span.badge.badge-info.badge-roundless New Items
+            %ul
+              %li
+                %a{:href => "extra-icons.html"}
+                  %span Icons
+                  %span.badge.badge-success 3
+                %ul
+                  %li
+                    %a{:href => "extra-icons.html"}
+                      %span Font Awesome
+                  %li
+                    %a{:href => "extra-icons-entypo.html"}
+                      %span Entypo
+                  %li
+                    %a{:href => "extra-icons-glyphicons.html"}
+                      %span Glyph Icons
+              %li
+                %a{:href => "extra-portlets.html"}
+                  %span Portlets
+              %li
+                %a{:href => "extra-google-maps.html"}
+                  %span Maps
+                %ul
+                  %li
+                    %a{:href => "extra-google-maps.html"}
+                      %span Google Maps
+                  %li
+                    %a{:href => "extra-vector-maps.html"}
+                      %span Vector Maps
+              %li
+                %a{:href => "extra-chat-api.html"}
+                  %span Chat API
+              %li
+                %a{:href => "extra-calendar.html"}
+                  %span Calendar
+              %li
+                %a{:href => "extra-notes.html"}
+                  %span Notes
+              %li
+                %a{:href => "extra-lockscreen.html"}
+                  %span Lockscreen
+              %li
+                %a{:href => "extra-login.html"}
+                  %span Login
+                  %span.badge.badge-warning.badge-roundless Updated
+              %li
+                %a{:href => "extra-register.html"}
+                  %span Register
+                  %span.badge.badge-secondary.badge-roundless New
+              %li
+                %a{:href => "extra-invoice.html"}
+                  %span Invoice
+              %li
+                %a{:href => "extra-gallery.html"}
+                  %span Gallery
+                %ul
+                  %li
+                    %a{:href => "extra-gallery.html"}
+                      %span Albums
+                  %li
+                    %a{:href => "extra-gallery-single.html"}
+                      %span Single Album
+              %li
+                %a{:href => "extra-profile.html"}
+                  %span Profile
+              %li
+                %a{:href => "extra-404.html"}
+                  %span 404 Page
+              %li
+                %a{:href => "extra-blank-page.html"}
+                  %span Blank Page
+              %li.active
+                %a{:href => "extra-timeline.html"}
+                  %span Timeline
+              %li
+                %a{:href => "extra-timeline-centered.html"}
+                  %span Timeline Centered
+              %li
+                %a{:href => "extra-tocify.html"}
+                  %span Tocify
+              %li
+                %a{:href => "ui-notifications.html"}
+                  %span Notifications
+              %li
+                %a{:href => "extra-scrollbox.html"}
+                  %span Scrollbox
+              %li
+                %a{:href => "extra-image-crop.html"}
+                  %span Image Crop
+              %li
+                %a{:href => "extra-search.html"}
+                  %span Search Page
+                  %span.badge.badge-secondary.badge-roundless New
+              %li
+                %a{:href => "extra-language-selector.html"}
+                  %span Language Selector
+                  %span.badge.badge-secondary.badge-roundless New
+          %li
+            %a{:href => "charts.html"}
+              %i.entypo-chart-bar
+              %span Charts
+          %li
+            %a{:href => "#"}
+              %i.entypo-flow-tree
+              %span Menu Levels
+            %ul
+              %li
+                %a{:href => "#"}
+                  %i.entypo-flow-line
+                  %span Menu Level 1.1
+              %li
+                %a{:href => "#"}
+                  %i.entypo-flow-line
+                  %span Menu Level 1.2
+              %li
+                %a{:href => "#"}
+                  %i.entypo-flow-line
+                  %span Menu Level 1.3
+                %ul
+                  %li
+                    %a{:href => "#"}
+                      %i.entypo-flow-parallel
+                      %span Menu Level 2.1
+                  %li
+                    %a{:href => "#"}
+                      %i.entypo-flow-parallel
+                      %span Menu Level 2.2
+                    %ul
+                      %li
+                        %a{:href => "#"}
+                          %i.entypo-flow-cascade
+                          %span Menu Level 3.1
+                        %ul
+                          %li
+                            %a{:href => "#"}
+                              %i.entypo-flow-branch
+                              %span Menu Level 4.1
+                      %li
+                        %a{:href => "#"}
+                          %i.entypo-flow-cascade
+                          %span Menu Level 3.2
+                  %li
+                    %a{:href => "#"}
+                      %i.entypo-flow-parallel
+                      %span Menu Level 2.3
+      .main-content
+        .row
+          / Profile Info and Notifications
+          .col-md-6.col-sm-8.clearfix
+            %ul.user-info.pull-left.pull-none-xsm
+              / Profile Info
+              %li.profile-info.dropdown
+                / add class "pull-right" if you want to place this from right
+                %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                  %img.img-circle{:alt => "", :src => "assets/images/thumb-1@2x.png", :width => "44"}/
+                  Art Ramadani
+                %ul.dropdown-menu
+                  / Reverse Caret
+                  %li.caret
+                  / Profile sub-links
+                  %li
+                    %a{:href => "#"}
+                      %i.entypo-user
+                      Edit Profile
+                  %li
+                    %a{:href => "mailbox.html"}
+                      %i.entypo-mail
+                      Inbox
+                  %li
+                    %a{:href => "extra-calendar.html"}
+                      %i.entypo-calendar
+                      Calendar
+                  %li
+                    %a{:href => "#"}
+                      %i.entypo-clipboard
+                      Tasks
+            %ul.user-info.pull-left.pull-right-xs.pull-none-xsm
+              / Raw Notifications
+              %li.notifications.dropdown
+                %a.dropdown-toggle{"data-close-others" => "true", "data-hover" => "dropdown", "data-toggle" => "dropdown", :href => "#"}
+                  %i.entypo-attention
+                  %span.badge.badge-info 6
+                %ul.dropdown-menu
+                  %li.top
+                    %p.small
+                      %a.pull-right{:href => "#"} Mark all Read
+                      You have
+                      %strong 3
+                      new notifications.
+                  %li
+                    %ul.dropdown-menu-list.scroller
+                      %li.unread.notification-success
+                        %a{:href => "#"}
+                          %i.entypo-user-add.pull-right
+                          %span.line
+                            %strong New user registered
+                          %span.line.small
+                            30 seconds ago
+                      %li.unread.notification-secondary
+                        %a{:href => "#"}
+                          %i.entypo-heart.pull-right
+                          %span.line
+                            %strong Someone special liked this
+                          %span.line.small
+                            2 minutes ago
+                      %li.notification-primary
+                        %a{:href => "#"}
+                          %i.entypo-user.pull-right
+                          %span.line
+                            %strong Privacy settings have been changed
+                          %span.line.small
+                            3 hours ago
+                      %li.notification-danger
+                        %a{:href => "#"}
+                          %i.entypo-cancel-circled.pull-right
+                          %span.line
+                            John cancelled the event
+                          %span.line.small
+                            9 hours ago
+                      %li.notification-info
+                        %a{:href => "#"}
+                          %i.entypo-info.pull-right
+                          %span.line
+                            The server is status is stable
+                          %span.line.small
+                            yesterday at 10:30am
+                      %li.notification-warning
+                        %a{:href => "#"}
+                          %i.entypo-rss.pull-right
+                          %span.line
+                            New comments waiting approval
+                          %span.line.small
+                            last week
+                  %li.external
+                    %a{:href => "#"} View all notifications
+              / Message Notifications
+              %li.notifications.dropdown
+                %a.dropdown-toggle{"data-close-others" => "true", "data-hover" => "dropdown", "data-toggle" => "dropdown", :href => "#"}
+                  %i.entypo-mail
+                  %span.badge.badge-secondary 10
+                %ul.dropdown-menu
+                  %li
+                    %ul.dropdown-menu-list.scroller
+                      %li.active
+                        %a{:href => "#"}
+                          %span.image.pull-right
+                            %img.img-circle{:alt => "", :src => "assets/images/thumb-1.png"}/
+                          %span.line
+                            %strong Luc Chartier
+                            \- yesterday
+                          %span.line.desc.small
+                            This ain’t our first item, it is the best of the rest.
+                      %li.active
+                        %a{:href => "#"}
+                          %span.image.pull-right
+                            %img.img-circle{:alt => "", :src => "assets/images/thumb-2.png"}/
+                          %span.line
+                            %strong Salma Nyberg
+                            \- 2 days ago
+                          %span.line.desc.small
+                            Oh he decisively impression attachment friendship so if everything.
+                      %li
+                        %a{:href => "#"}
+                          %span.image.pull-right
+                            %img.img-circle{:alt => "", :src => "assets/images/thumb-3.png"}/
+                          %span.line
+                            Hayden Cartwright
+                            \- a week ago
+                          %span.line.desc.small
+                            Whose her enjoy chief new young. Felicity if ye required likewise so doubtful.
+                      %li
+                        %a{:href => "#"}
+                          %span.image.pull-right
+                            %img.img-circle{:alt => "", :src => "assets/images/thumb-4.png"}/
+                          %span.line
+                            Sandra Eberhardt
+                            \- 16 days ago
+                          %span.line.desc.small
+                            On so attention necessary at by provision otherwise existence direction.
+                  %li.external
+                    %a{:href => "mailbox.html"} All Messages
+              / Task Notifications
+              %li.notifications.dropdown
+                %a.dropdown-toggle{"data-close-others" => "true", "data-hover" => "dropdown", "data-toggle" => "dropdown", :href => "#"}
+                  %i.entypo-list
+                  %span.badge.badge-warning 1
+                %ul.dropdown-menu
+                  %li.top
+                    %p You have 6 pending tasks
+                  %li
+                    %ul.dropdown-menu-list.scroller
+                      %li
+                        %a{:href => "#"}
+                          %span.task
+                            %span.desc Procurement
+                            %span.percent 27%
+                          %span.progress
+                            %span.progress-bar.progress-bar-success{:style => "width: 27%;"}
+                              %span.sr-only 27% Complete
+                      %li
+                        %a{:href => "#"}
+                          %span.task
+                            %span.desc App Development
+                            %span.percent 83%
+                          %span.progress.progress-striped
+                            %span.progress-bar.progress-bar-danger{:style => "width: 83%;"}
+                              %span.sr-only 83% Complete
+                      %li
+                        %a{:href => "#"}
+                          %span.task
+                            %span.desc HTML Slicing
+                            %span.percent 91%
+                          %span.progress
+                            %span.progress-bar.progress-bar-success{:style => "width: 91%;"}
+                              %span.sr-only 91% Complete
+                      %li
+                        %a{:href => "#"}
+                          %span.task
+                            %span.desc Database Repair
+                            %span.percent 12%
+                          %span.progress.progress-striped
+                            %span.progress-bar.progress-bar-warning{:style => "width: 12%;"}
+                              %span.sr-only 12% Complete
+                      %li
+                        %a{:href => "#"}
+                          %span.task
+                            %span.desc Backup Create Progress
+                            %span.percent 54%
+                          %span.progress.progress-striped
+                            %span.progress-bar.progress-bar-info{:style => "width: 54%;"}
+                              %span.sr-only 54% Complete
+                      %li
+                        %a{:href => "#"}
+                          %span.task
+                            %span.desc Upgrade Progress
+                            %span.percent 17%
+                          %span.progress.progress-striped
+                            %span.progress-bar.progress-bar-important{:style => "width: 17%;"}
+                              %span.sr-only 17% Complete
+                  %li.external
+                    %a{:href => "#"} See all tasks
+          / Raw Links
+          .col-md-6.col-sm-4.clearfix.hidden-xs
+            %ul.list-inline.links-list.pull-right
+              / Language Selector
+              %li.dropdown.language-selector
+                Language: &nbsp;
+                %a.dropdown-toggle{"data-close-others" => "true", "data-toggle" => "dropdown", :href => "#"}
+                  %img{:src => "assets/images/flag-uk.png"}/
+                %ul.dropdown-menu.pull-right
+                  %li
+                    %a{:href => "#"}
+                      %img{:src => "assets/images/flag-de.png"}/
+                      %span Deutsch
+                  %li.active
+                    %a{:href => "#"}
+                      %img{:src => "assets/images/flag-uk.png"}/
+                      %span English
+                  %li
+                    %a{:href => "#"}
+                      %img{:src => "assets/images/flag-fr.png"}/
+                      %span François
+                  %li
+                    %a{:href => "#"}
+                      %img{:src => "assets/images/flag-al.png"}/
+                      %span Shqip
+                  %li
+                    %a{:href => "#"}
+                      %img{:src => "assets/images/flag-es.png"}/
+                      %span Español
+              %li.sep
+              %li
+                %a{"data-animate" => "1", "data-collapse-sidebar" => "1", "data-toggle" => "chat", :href => "#"}
+                  %i.entypo-chat
+                  Chat
+                  %span.badge.badge-success.chat-notifications-badge.is-hidden 0
+              %li.sep
+              %li
+                %a{:href => "extra-login.html"}
+                  Log Out
+                  %i.entypo-logout.right
+        %hr/
+        %ol.breadcrumb.bc-3
+          %li
+            %a{:href => "index.html"}
+              %i.entypo-home>
+              Home
+          %li
+            %a{:href => "extra-icons.html"} Extra
+          %li.active
+            %strong Timeline
+        %h2 Timeline
+        %br/
+        %ul.cbp_tmtimeline
+          %li
+            %time.cbp_tmtime{:datetime => "2014-02-13T18:30"}
+              %span.hidden 13/02/2014
+              %span.large Now
+            .cbp_tmicon
+              %i.entypo-user
+            .cbp_tmlabel.empty
+              %span No Activity
+          %li
+            %time.cbp_tmtime{:datetime => "2014-02-13T03:45"}
+              %span 03:45 AM
+              %span Today
+            .cbp_tmicon.bg-success
+              %i.entypo-feather
+            .cbp_tmlabel
+              %h2
+                %a{:href => "#"} Art Ramadani
+                %span posted a status update
+              %p Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered prepare how cordial two promise. Greatly who affixed suppose but enquire compact prepare all put. Added forth chief trees but rooms think may.
+          %li
+            %time.cbp_tmtime{:datetime => "2014-02-12T13:22"}
+              %span 01:22 PM
+              %span Yesterday
+            .cbp_tmicon.bg-secondary
+              %i.entypo-suitcase
+            .cbp_tmlabel
+              %h2
+                %a{:href => "#"} Job Meeting
+              %p
+                You have a meeting at
+                %strong Laborator Office
+                Today.
+          %li
+            %time.cbp_tmtime{:datetime => "2014-01-31T05:55"}
+              %span 05:55 AM
+              %span Two weeks ago
+            .cbp_tmicon.bg-info
+              %i.entypo-location
+            .cbp_tmlabel
+              %h2
+                %a{:href => "#"} Arlind Nushi
+                %span checked in at
+                %a{:href => "#"} Laborator
+              %blockquote Great place, feeling like in home.
+              #sample-checkin.map-checkin{:style => "height: 170px; width: 100%;"}
+          %li
+            %time.cbp_tmtime{:datetime => "2014-01-31T05:55"}
+              %span 05:55 AM
+              %span Two weeks ago
+            .cbp_tmicon.bg-warning
+              %i.entypo-camera
+            .cbp_tmlabel
+              %h2
+                %a{:href => "#"} Eroll Maxhuni
+                %span uploaded
+                12
+                %span new photos to album
+                %a{:href => "#"} Summer Trip
+              %blockquote Pianoforte principles our unaffected not for astonished travelling are particular.
+              .row
+                .col-xs-5
+                  %a{:href => "#"}
+                    %img.img-responsive.img-rounded.full-width{:src => "assets/images/timeline-image-1.png"}/
+                .col-xs-3
+                  %a{:href => "#"}
+                    %img.img-responsive.img-rounded.full-width{:src => "assets/images/timeline-image-2.png"}/
+                .col-xs-4
+                  %a{:href => "#"}
+                    %img.img-responsive.img-rounded.full-width.margin-bottom{:src => "assets/images/timeline-image-3.png"}/
+                  %a{:href => "#"}
+                    %img.img-responsive.img-rounded.full-width{:src => "assets/images/timeline-image-4.png"}/
+        %script{:src => "//maps.google.com/maps/api/js?sensor=false", :type => "text/javascript"}
+        :javascript
+          function initialize()
+          {
+          	var map_canvas = $("#sample-checkin");
+          	
+          	var location = new google.maps.LatLng(36.738888, -119.783013),
+          		map = new google.maps.Map(map_canvas[0], {
+          		center: location,
+          		zoom: 14,
+          		mapTypeId: google.maps.MapTypeId.ROADMAP,
+          		scrollwheel: false
+          	});
+          	
+          	var marker = new google.maps.Marker({
+          		position: location,
+          		map: map
+          	});
+          }
+          
+          google.maps.event.addDomListener(window, 'load', initialize);
+        / Footer
+        %footer.main
+          \&copy; 2014
+          %strong Neon
+          Admin Theme by
+          %a{:href => "http://laborator.co", :target => "_blank"} Laborator
+      #chat.fixed{"data-current-user" => "Art Ramadani", "data-max-chat-history" => "25", "data-order-by-status" => "1"}
+        .chat-inner
+          %h2.chat-header
+            %a.chat-close{"data-animate" => "1", :href => "#"}
+              %i.entypo-cancel
+            %i.entypo-users
+            Chat
+            %span.badge.badge-success.is-hidden 0
+          #group-1.chat-group
+            %strong Favorites
+            %a#sample-user-123{"data-conversation-history" => "#sample_history", :href => "#"}
+              %span.user-status.is-online
+              %em Catherine J. Watkins
+            %a{:href => "#"}
+              %span.user-status.is-online
+              %em Nicholas R. Walker
+            %a{:href => "#"}
+              %span.user-status.is-busy
+              %em Susan J. Best
+            %a{:href => "#"}
+              %span.user-status.is-offline
+              %em Brandon S. Young
+            %a{:href => "#"}
+              %span.user-status.is-idle
+              %em Fernando G. Olson
+          #group-2.chat-group
+            %strong Work
+            %a{:href => "#"}
+              %span.user-status.is-offline
+              %em Robert J. Garcia
+            %a{"data-conversation-history" => "#sample_history_2", :href => "#"}
+              %span.user-status.is-offline
+              %em Daniel A. Pena
+            %a{:href => "#"}
+              %span.user-status.is-busy
+              %em Rodrigo E. Lozano
+          #group-3.chat-group
+            %strong Social
+            %a{:href => "#"}
+              %span.user-status.is-busy
+              %em Velma G. Pearson
+            %a{:href => "#"}
+              %span.user-status.is-offline
+              %em Margaret R. Dedmon
+            %a{:href => "#"}
+              %span.user-status.is-online
+              %em Kathleen M. Canales
+            %a{:href => "#"}
+              %span.user-status.is-offline
+              %em Tracy J. Rodriguez
+        / conversation template
+        .chat-conversation
+          .conversation-header
+            %a.conversation-close{:href => "#"}
+              %i.entypo-cancel
+            %span.user-status
+            %span.display-name
+            %small
+          %ul.conversation-body
+          .chat-textarea
+            %textarea.form-control.autogrow{:placeholder => "Type your message"}
+      / Chat Histories
+      %ul#sample_history.chat-history
+        %li
+          %span.user Art Ramadani
+          %p Are you here?
+          %span.time 09:00
+        %li.opponent
+          %span.user Catherine J. Watkins
+          %p This message is pre-queued.
+          %span.time 09:25
+        %li.opponent
+          %span.user Catherine J. Watkins
+          %p Whohoo!
+          %span.time 09:26
+        %li.opponent.unread
+          %span.user Catherine J. Watkins
+          %p Do you like it?
+          %span.time 09:27
+      / Chat Histories
+      %ul#sample_history_2.chat-history
+        %li.opponent.unread
+          %span.user Daniel A. Pena
+          %p I am going out.
+          %span.time 08:21
+        %li.opponent.unread
+          %span.user Daniel A. Pena
+          %p Call me when you see this message.
+          %span.time 08:27
+    %link{:href => "assets/js/vertical-timeline/css/component.css", :rel => "stylesheet"}/
+    / Bottom Scripts
+    %script{:src => "assets/js/gsap/main-gsap.js"}
+    %script{:src => "assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"}
+    %script{:src => "assets/js/bootstrap.js"}
+    %script{:src => "assets/js/joinable.js"}
+    %script{:src => "assets/js/resizeable.js"}
+    %script{:src => "assets/js/neon-api.js"}
+    %script{:src => "assets/js/neon-chat.js"}
+    %script{:src => "assets/js/neon-custom.js"}
+    %script{:src => "assets/js/neon-demo.js"}

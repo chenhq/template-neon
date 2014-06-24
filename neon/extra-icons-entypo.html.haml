@@ -1,0 +1,1679 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %meta{:content => "Neon Admin Panel", :name => "description"}/
+    %meta{:content => "", :name => "author"}/
+    %title Neon | Entypo
+    %link{:href => "assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/font-icons/entypo/css/entypo.css", :rel => "stylesheet"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic", :rel => "stylesheet"}/
+    %link{:href => "assets/css/bootstrap.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/neon-core.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/neon-theme.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/neon-forms.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/custom.css", :rel => "stylesheet"}/
+    %script{:src => "assets/js/jquery-1.11.0.min.js"}
+    /[if lt IE 9] <script src="assets/js/ie8-responsive-file-warning.js"></script>
+    / HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    /[if lt IE 9]
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  %body.page-body{"data-url" => "http://neon.dev"}
+    .page-container
+      / add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always
+      .sidebar-menu
+        %header.logo-env
+          / logo
+          .logo
+            %a{:href => "index.html"}
+              %img{:alt => "", :src => "assets/images/logo@2x.png", :width => "120"}/
+          / logo collapse icon
+          .sidebar-collapse
+            %a.sidebar-collapse-icon.with-animation{:href => "#"}
+              / add class "with-animation" if you want sidebar to have animation during expanding/collapsing transition
+              %i.entypo-menu
+          / open/close menu icon (do not remove if you want to enable menu on mobile devices)
+          .sidebar-mobile-menu.visible-xs
+            %a.with-animation{:href => "#"}
+              / add class "with-animation" to support animation
+              %i.entypo-menu
+        %ul#main-menu
+          / add class "multiple-expanded" to allow multiple submenus to open
+          / class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active"
+          / Search Bar
+          %li#search
+            %form{:action => "", :method => "get"}
+              %input.search-input{:name => "q", :placeholder => "Search something...", :type => "text"}/
+              %button{:type => "submit"}
+                %i.entypo-search
+          %li
+            %a{:href => "index.html"}
+              %i.entypo-gauge
+              %span Dashboard
+            %ul
+              %li
+                %a{:href => "index.html"}
+                  %span Dashboard 1
+              %li
+                %a{:href => "dashboard-2.html"}
+                  %span Dashboard 2
+              %li
+                %a{:href => "dashboard-3.html"}
+                  %span Dashboard 3
+                  %span.badge.badge-secondary.badge-roundless New
+              %li
+                %a{:href => "skin-black.html"}
+                  %span Skins
+                %ul
+                  %li
+                    %a{:href => "skin-black.html"}
+                      %span Black Skin
+                  %li
+                    %a{:href => "skin-white.html"}
+                      %span White Skin
+                  %li
+                    %a{:href => "skin-purple.html"}
+                      %span Purple Skin
+                  %li
+                    %a{:href => "skin-cafe.html"}
+                      %span Cafe Skin
+                  %li
+                    %a{:href => "skin-red.html"}
+                      %span Red Skin
+                  %li
+                    %a{:href => "skin-green.html"}
+                      %span Green Skin
+                  %li
+                    %a{:href => "skin-yellow.html"}
+                      %span Yellow Skin
+                  %li
+                    %a{:href => "skin-blue.html"}
+                      %span Blue Skin
+              %li
+                %a{:href => "highlights.html"}
+                  %span What's New
+                  %span.badge.badge-success.badge-roundless v1.5.1
+          %li
+            %a{:href => "layout-api.html"}
+              %i.entypo-layout
+              %span Layouts
+            %ul
+              %li
+                %a{:href => "layout-api.html"}
+                  %span Layout API
+                  %span.badge.badge-warning.badge-roundless Updated
+              %li
+                %a{:href => "layout-collapsed-sidebar.html"}
+                  %span Collapsed Sidebar
+              %li
+                %a{:href => "layout-fixed-sidebar.html"}
+                  %span Fixed Sidebar
+              %li
+                %a{:href => "layout-chat-open.html"}
+                  %span Chat Open
+              %li
+                %a{:href => "layout-horizontal-menu-boxed.html"}
+                  %span Horizontal Menu Boxed
+              %li
+                %a{:href => "layout-horizontal-menu-fluid.html"}
+                  %span Horizontal Menu Fluid
+              %li
+                %a{:href => "layout-mixed-menus.html"}
+                  %span Mixed Menus
+              %li
+                %a{:href => "layout-right-sidebar.html"}
+                  %span Right Sidebar
+                  %span.badge.badge-secondary.badge-roundless New
+              %li
+                %a{:href => "layout-both-menus-right-sidebar.html"}
+                  %span Both Menus (Right Sidebar)
+                  %span.badge.badge-secondary.badge-roundless New
+              %li
+                %a{:href => "layout-page-transition-fade.html"}
+                  %span Page Enter Transitions
+                %ul
+                  %li
+                    %a{:href => "layout-page-transition-fade.html"}
+                      %span Fade Scale
+                  %li
+                    %a{:href => "layout-page-transition-left-in.html"}
+                      %span Left In
+                  %li
+                    %a{:href => "layout-page-transition-right-in.html"}
+                      %span Right In
+                  %li
+                    %a{:href => "layout-page-transition-fade-only.html"}
+                      %span Fade Only
+          %li
+            %a{:href => "index.html", :target => "_blank"}
+              %i.entypo-monitor
+              %span Frontend
+              %span.badge.badge-secondary.badge-roundless New
+          %li
+            %a{:href => "ui-panels.html"}
+              %i.entypo-newspaper
+              %span UI Elements
+            %ul
+              %li
+                %a{:href => "ui-panels.html"}
+                  %span Panels
+              %li
+                %a{:href => "ui-tiles.html"}
+                  %span Tiles
+              %li
+                %a{:href => "forms-buttons.html"}
+                  %span Buttons
+              %li
+                %a{:href => "ui-typography.html"}
+                  %span Typography
+              %li
+                %a{:href => "ui-tabs-accordions.html"}
+                  %span Tabs &amp; Accordions
+              %li
+                %a{:href => "ui-tooltips-popovers.html"}
+                  %span Tooltips &amp; Popovers
+              %li
+                %a{:href => "ui-navbars.html"}
+                  %span Navbars
+              %li
+                %a{:href => "ui-breadcrumbs.html"}
+                  %span Breadcrumbs
+              %li
+                %a{:href => "ui-badges-labels.html"}
+                  %span Badges &amp; Labels
+              %li
+                %a{:href => "ui-progress-bars.html"}
+                  %span Progress Bars
+              %li
+                %a{:href => "ui-modals.html"}
+                  %span Modals
+              %li
+                %a{:href => "ui-blockquotes.html"}
+                  %span Blockquotes
+              %li
+                %a{:href => "ui-alerts.html"}
+                  %span Alerts
+              %li
+                %a{:href => "ui-pagination.html"}
+                  %span Pagination
+          %li
+            %a{:href => "mailbox.html"}
+              %i.entypo-mail
+              %span Mailbox
+              %span.badge.badge-secondary 8
+            %ul
+              %li
+                %a{:href => "mailbox.html"}
+                  %i.entypo-inbox
+                  %span Inbox
+              %li
+                %a{:href => "mailbox-compose.html"}
+                  %i.entypo-pencil
+                  %span Compose Message
+              %li
+                %a{:href => "mailbox-message.html"}
+                  %i.entypo-attach
+                  %span View Message
+          %li
+            %a{:href => "forms-main.html"}
+              %i.entypo-doc-text
+              %span Forms
+            %ul
+              %li
+                %a{:href => "forms-main.html"}
+                  %span Basic Elements
+              %li
+                %a{:href => "forms-advanced.html"}
+                  %span Advanced Plugins
+                  %span.badge.badge-warning.badge-roundless Updated
+              %li
+                %a{:href => "forms-wizard.html"}
+                  %span Form Wizard
+              %li
+                %a{:href => "forms-validation.html"}
+                  %span Data Validation
+              %li
+                %a{:href => "forms-masks.html"}
+                  %span Input Masks
+              %li
+                %a{:href => "forms-sliders.html"}
+                  %span Sliders
+              %li
+                %a{:href => "forms-file-upload.html"}
+                  %span File Upload
+              %li
+                %a{:href => "forms-wysiwyg.html"}
+                  %span Editors
+                  %span.badge.badge-warning.badge-roundless Updated
+          %li
+            %a{:href => "tables-main.html"}
+              %i.entypo-window
+              %span Tables
+            %ul
+              %li
+                %a{:href => "tables-main.html"}
+                  %span Basic Tables
+              %li
+                %a{:href => "tables-datatable.html"}
+                  %span Data Tables
+                  %span.badge.badge-warning.badge-roundless Updated
+          %li.opened.active
+            %a{:href => "extra-icons.html"}
+              %i.entypo-bag
+              %span Extra
+              %span.badge.badge-info.badge-roundless New Items
+            %ul
+              %li.opened.active
+                %a{:href => "extra-icons.html"}
+                  %span Icons
+                  %span.badge.badge-success 3
+                %ul
+                  %li
+                    %a{:href => "extra-icons.html"}
+                      %span Font Awesome
+                  %li.active
+                    %a{:href => "extra-icons-entypo.html"}
+                      %span Entypo
+                  %li
+                    %a{:href => "extra-icons-glyphicons.html"}
+                      %span Glyph Icons
+              %li
+                %a{:href => "extra-portlets.html"}
+                  %span Portlets
+              %li
+                %a{:href => "extra-google-maps.html"}
+                  %span Maps
+                %ul
+                  %li
+                    %a{:href => "extra-google-maps.html"}
+                      %span Google Maps
+                  %li
+                    %a{:href => "extra-vector-maps.html"}
+                      %span Vector Maps
+              %li
+                %a{:href => "extra-chat-api.html"}
+                  %span Chat API
+              %li
+                %a{:href => "extra-calendar.html"}
+                  %span Calendar
+              %li
+                %a{:href => "extra-notes.html"}
+                  %span Notes
+              %li
+                %a{:href => "extra-lockscreen.html"}
+                  %span Lockscreen
+              %li
+                %a{:href => "extra-login.html"}
+                  %span Login
+                  %span.badge.badge-warning.badge-roundless Updated
+              %li
+                %a{:href => "extra-register.html"}
+                  %span Register
+                  %span.badge.badge-secondary.badge-roundless New
+              %li
+                %a{:href => "extra-invoice.html"}
+                  %span Invoice
+              %li
+                %a{:href => "extra-gallery.html"}
+                  %span Gallery
+                %ul
+                  %li
+                    %a{:href => "extra-gallery.html"}
+                      %span Albums
+                  %li
+                    %a{:href => "extra-gallery-single.html"}
+                      %span Single Album
+              %li
+                %a{:href => "extra-profile.html"}
+                  %span Profile
+              %li
+                %a{:href => "extra-404.html"}
+                  %span 404 Page
+              %li
+                %a{:href => "extra-blank-page.html"}
+                  %span Blank Page
+              %li
+                %a{:href => "extra-timeline.html"}
+                  %span Timeline
+              %li
+                %a{:href => "extra-timeline-centered.html"}
+                  %span Timeline Centered
+              %li
+                %a{:href => "extra-tocify.html"}
+                  %span Tocify
+              %li
+                %a{:href => "ui-notifications.html"}
+                  %span Notifications
+              %li
+                %a{:href => "extra-scrollbox.html"}
+                  %span Scrollbox
+              %li
+                %a{:href => "extra-image-crop.html"}
+                  %span Image Crop
+              %li
+                %a{:href => "extra-search.html"}
+                  %span Search Page
+                  %span.badge.badge-secondary.badge-roundless New
+              %li
+                %a{:href => "extra-language-selector.html"}
+                  %span Language Selector
+                  %span.badge.badge-secondary.badge-roundless New
+          %li
+            %a{:href => "charts.html"}
+              %i.entypo-chart-bar
+              %span Charts
+          %li
+            %a{:href => "#"}
+              %i.entypo-flow-tree
+              %span Menu Levels
+            %ul
+              %li
+                %a{:href => "#"}
+                  %i.entypo-flow-line
+                  %span Menu Level 1.1
+              %li
+                %a{:href => "#"}
+                  %i.entypo-flow-line
+                  %span Menu Level 1.2
+              %li
+                %a{:href => "#"}
+                  %i.entypo-flow-line
+                  %span Menu Level 1.3
+                %ul
+                  %li
+                    %a{:href => "#"}
+                      %i.entypo-flow-parallel
+                      %span Menu Level 2.1
+                  %li
+                    %a{:href => "#"}
+                      %i.entypo-flow-parallel
+                      %span Menu Level 2.2
+                    %ul
+                      %li
+                        %a{:href => "#"}
+                          %i.entypo-flow-cascade
+                          %span Menu Level 3.1
+                        %ul
+                          %li
+                            %a{:href => "#"}
+                              %i.entypo-flow-branch
+                              %span Menu Level 4.1
+                      %li
+                        %a{:href => "#"}
+                          %i.entypo-flow-cascade
+                          %span Menu Level 3.2
+                  %li
+                    %a{:href => "#"}
+                      %i.entypo-flow-parallel
+                      %span Menu Level 2.3
+      .main-content
+        %ol.breadcrumb.bc-3
+          %li
+            %a{:href => "index.html"}
+              %i.entypo-home>
+              Home
+          %li
+            %a{:href => "extra-icons.html"} Extra
+          %li
+            %a{:href => "extra-icons.html"} Icons
+          %li.active
+            %strong Entypo
+        %h1 Entypo Icon Set
+        %em Entypo is a set of 250+ carefully crafted pictograms. All released for free under the Creative Commons license CC BY-SA.
+        .row
+          .col-md-3
+            #toc
+          .col-md-9
+            .tocify-content
+              %section#social
+                %h2 Main Icons
+                .row.showcase-icon-list
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-note
+                      entypo-note
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-logo-db
+                      entypo-logo-db
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-music
+                      entypo-music
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-search
+                      entypo-search
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-flashlight
+                      entypo-flashlight
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-mail
+                      entypo-mail
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-heart
+                      entypo-heart
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-heart-empty
+                      entypo-heart-empty
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-star
+                      entypo-star
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-star-empty
+                      entypo-star-empty
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-user
+                      entypo-user
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-users
+                      entypo-users
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-user-add
+                      entypo-user-add
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-video
+                      entypo-video
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-picture
+                      entypo-picture
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-camera
+                      entypo-camera
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-layout
+                      entypo-layout
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-menu
+                      entypo-menu
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-check
+                      entypo-check
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-cancel
+                      entypo-cancel
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-cancel-circled
+                      entypo-cancel-circled
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-cancel-squared
+                      entypo-cancel-squared
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-plus
+                      entypo-plus
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-plus-circled
+                      entypo-plus-circled
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-plus-squared
+                      entypo-plus-squared
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-minus
+                      entypo-minus
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-minus-circled
+                      entypo-minus-circled
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-minus-squared
+                      entypo-minus-squared
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-help
+                      entypo-help
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-help-circled
+                      entypo-help-circled
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-info
+                      entypo-info
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-info-circled
+                      entypo-info-circled
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-back
+                      entypo-back
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-home
+                      entypo-home
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-link
+                      entypo-link
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-attach
+                      entypo-attach
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-lock
+                      entypo-lock
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-lock-open
+                      entypo-lock-open
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-eye
+                      entypo-eye
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-tag
+                      entypo-tag
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-bookmark
+                      entypo-bookmark
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-bookmarks
+                      entypo-bookmarks
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-flag
+                      entypo-flag
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-thumbs-up
+                      entypo-thumbs-up
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-thumbs-down
+                      entypo-thumbs-down
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-download
+                      entypo-download
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-upload
+                      entypo-upload
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-upload-cloud
+                      entypo-upload-cloud
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-reply
+                      entypo-reply
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-reply-all
+                      entypo-reply-all
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-forward
+                      entypo-forward
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-quote
+                      entypo-quote
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-code
+                      entypo-code
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-export
+                      entypo-export
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-pencil
+                      entypo-pencil
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-feather
+                      entypo-feather
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-print
+                      entypo-print
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-retweet
+                      entypo-retweet
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-keyboard
+                      entypo-keyboard
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-comment
+                      entypo-comment
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-chat
+                      entypo-chat
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-bell
+                      entypo-bell
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-attention
+                      entypo-attention
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-alert
+                      entypo-alert
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-vcard
+                      entypo-vcard
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-address
+                      entypo-address
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-location
+                      entypo-location
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-map
+                      entypo-map
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-direction
+                      entypo-direction
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-compass
+                      entypo-compass
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-cup
+                      entypo-cup
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-trash
+                      entypo-trash
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-doc
+                      entypo-doc
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-docs
+                      entypo-docs
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-doc-landscape
+                      entypo-doc-landscape
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-doc-text
+                      entypo-doc-text
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-doc-text-inv
+                      entypo-doc-text-inv
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-newspaper
+                      entypo-newspaper
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-book-open
+                      entypo-book-open
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-book
+                      entypo-book
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-folder
+                      entypo-folder
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-archive
+                      entypo-archive
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-box
+                      entypo-box
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-rss
+                      entypo-rss
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-phone
+                      entypo-phone
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-cog
+                      entypo-cog
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-tools
+                      entypo-tools
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-share
+                      entypo-share
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-shareable
+                      entypo-shareable
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-basket
+                      entypo-basket
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-bag
+                      entypo-bag
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-calendar
+                      entypo-calendar
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-login
+                      entypo-login
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-logout
+                      entypo-logout
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-mic
+                      entypo-mic
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-mute
+                      entypo-mute
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-sound
+                      entypo-sound
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-volume
+                      entypo-volume
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-clock
+                      entypo-clock
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-hourglass
+                      entypo-hourglass
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-lamp
+                      entypo-lamp
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-light-down
+                      entypo-light-down
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-light-up
+                      entypo-light-up
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-adjust
+                      entypo-adjust
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-block
+                      entypo-block
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-resize-full
+                      entypo-resize-full
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-resize-small
+                      entypo-resize-small
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-popup
+                      entypo-popup
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-publish
+                      entypo-publish
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-window
+                      entypo-window
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-arrow-combo
+                      entypo-arrow-combo
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-down-circled
+                      entypo-down-circled
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-left-circled
+                      entypo-left-circled
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-right-circled
+                      entypo-right-circled
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-up-circled
+                      entypo-up-circled
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-down-open
+                      entypo-down-open
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-left-open
+                      entypo-left-open
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-right-open
+                      entypo-right-open
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-up-open
+                      entypo-up-open
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-down-open-mini
+                      entypo-down-open-mini
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-left-open-mini
+                      entypo-left-open-mini
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-right-open-mini
+                      entypo-right-open-mini
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-up-open-mini
+                      entypo-up-open-mini
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-down-open-big
+                      entypo-down-open-big
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-left-open-big
+                      entypo-left-open-big
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-right-open-big
+                      entypo-right-open-big
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-up-open-big
+                      entypo-up-open-big
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-down
+                      entypo-down
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-left
+                      entypo-left
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-right
+                      entypo-right
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-up
+                      entypo-up
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-down-dir
+                      entypo-down-dir
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-left-dir
+                      entypo-left-dir
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-right-dir
+                      entypo-right-dir
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-up-dir
+                      entypo-up-dir
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-down-bold
+                      entypo-down-bold
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-left-bold
+                      entypo-left-bold
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-right-bold
+                      entypo-right-bold
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-up-bold
+                      entypo-up-bold
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-down-thin
+                      entypo-down-thin
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-left-thin
+                      entypo-left-thin
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-right-thin
+                      entypo-right-thin
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-note-beamed
+                      entypo-note-beamed
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-ccw
+                      entypo-ccw
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-cw
+                      entypo-cw
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-arrows-ccw
+                      entypo-arrows-ccw
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-level-down
+                      entypo-level-down
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-level-up
+                      entypo-level-up
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-shuffle
+                      entypo-shuffle
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-loop
+                      entypo-loop
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-switch
+                      entypo-switch
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-play
+                      entypo-play
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-stop
+                      entypo-stop
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-pause
+                      entypo-pause
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-record
+                      entypo-record
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-to-end
+                      entypo-to-end
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-to-start
+                      entypo-to-start
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-fast-forward
+                      entypo-fast-forward
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-fast-backward
+                      entypo-fast-backward
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-progress-0
+                      entypo-progress-0
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-progress-1
+                      entypo-progress-1
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-progress-2
+                      entypo-progress-2
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-progress-3
+                      entypo-progress-3
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-target
+                      entypo-target
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-palette
+                      entypo-palette
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-list
+                      entypo-list
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-list-add
+                      entypo-list-add
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-signal
+                      entypo-signal
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-trophy
+                      entypo-trophy
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-battery
+                      entypo-battery
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-back-in-time
+                      entypo-back-in-time
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-monitor
+                      entypo-monitor
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-mobile
+                      entypo-mobile
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-network
+                      entypo-network
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-cd
+                      entypo-cd
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-inbox
+                      entypo-inbox
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-install
+                      entypo-install
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-globe
+                      entypo-globe
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-cloud
+                      entypo-cloud
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-cloud-thunder
+                      entypo-cloud-thunder
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-flash
+                      entypo-flash
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-moon
+                      entypo-moon
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-flight
+                      entypo-flight
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-paper-plane
+                      entypo-paper-plane
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-leaf
+                      entypo-leaf
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-lifebuoy
+                      entypo-lifebuoy
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-mouse
+                      entypo-mouse
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-briefcase
+                      entypo-briefcase
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-suitcase
+                      entypo-suitcase
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-dot
+                      entypo-dot
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-dot-2
+                      entypo-dot-2
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-dot-3
+                      entypo-dot-3
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-brush
+                      entypo-brush
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-magnet
+                      entypo-magnet
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-infinity
+                      entypo-infinity
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-erase
+                      entypo-erase
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-chart-pie
+                      entypo-chart-pie
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-chart-line
+                      entypo-chart-line
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-chart-bar
+                      entypo-chart-bar
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-chart-area
+                      entypo-chart-area
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-tape
+                      entypo-tape
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-graduation-cap
+                      entypo-graduation-cap
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-language
+                      entypo-language
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-ticket
+                      entypo-ticket
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-water
+                      entypo-water
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-droplet
+                      entypo-droplet
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-air
+                      entypo-air
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-credit-card
+                      entypo-credit-card
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-floppy
+                      entypo-floppy
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-clipboard
+                      entypo-clipboard
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-megaphone
+                      entypo-megaphone
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-database
+                      entypo-database
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-drive
+                      entypo-drive
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-bucket
+                      entypo-bucket
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-thermometer
+                      entypo-thermometer
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-key
+                      entypo-key
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-flow-cascade
+                      entypo-flow-cascade
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-flow-branch
+                      entypo-flow-branch
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-flow-tree
+                      entypo-flow-tree
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-flow-line
+                      entypo-flow-line
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-flow-parallel
+                      entypo-flow-parallel
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-rocket
+                      entypo-rocket
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-gauge
+                      entypo-gauge
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-traffic-cone
+                      entypo-traffic-cone
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-cc
+                      entypo-cc
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-cc-by
+                      entypo-cc-by
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-cc-nc
+                      entypo-cc-nc
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-cc-nc-eu
+                      entypo-cc-nc-eu
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-cc-nc-jp
+                      entypo-cc-nc-jp
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-cc-sa
+                      entypo-cc-sa
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-cc-nd
+                      entypo-cc-nd
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-cc-pd
+                      entypo-cc-pd
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-cc-zero
+                      entypo-cc-zero
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-cc-share
+                      entypo-cc-share
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-cc-remix
+                      entypo-cc-remix
+              %section#social
+                %h2 Social Icons
+                .row.showcase-icon-list
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-github
+                      entypo-github
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-github-circled
+                      entypo-github-circled
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-flickr
+                      entypo-flickr
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-flickr-circled
+                      entypo-flickr-circled
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-vimeo
+                      entypo-vimeo
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-vimeo-circled
+                      entypo-vimeo-circled
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-twitter
+                      entypo-twitter
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-twitter-circled
+                      entypo-twitter-circled
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-facebook
+                      entypo-facebook
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-facebook-circled
+                      entypo-facebook-circled
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-facebook-squared
+                      entypo-facebook-squared
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-gplus
+                      entypo-gplus
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-gplus-circled
+                      entypo-gplus-circled
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-pinterest
+                      entypo-pinterest
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-pinterest-circled
+                      entypo-pinterest-circled
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-tumblr
+                      entypo-tumblr
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-tumblr-circled
+                      entypo-tumblr-circled
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-linkedin
+                      entypo-linkedin
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-linkedin-circled
+                      entypo-linkedin-circled
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-dribbble
+                      entypo-dribbble
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-dribbble-circled
+                      entypo-dribbble-circled
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-stumbleupon
+                      entypo-stumbleupon
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-stumbleupon-circled
+                      entypo-stumbleupon-circled
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-lastfm
+                      entypo-lastfm
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-lastfm-circled
+                      entypo-lastfm-circled
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-rdio
+                      entypo-rdio
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-rdio-circled
+                      entypo-rdio-circled
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-spotify
+                      entypo-spotify
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-spotify-circled
+                      entypo-spotify-circled
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-qq
+                      entypo-qq
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-instagram
+                      entypo-instagram
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-dropbox
+                      entypo-dropbox
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-evernote
+                      entypo-evernote
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-flattr
+                      entypo-flattr
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-skype
+                      entypo-skype
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-skype-circled
+                      entypo-skype-circled
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-renren
+                      entypo-renren
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-sina-weibo
+                      entypo-sina-weibo
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-paypal
+                      entypo-paypal
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-picasa
+                      entypo-picasa
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-soundcloud
+                      entypo-soundcloud
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-mixi
+                      entypo-mixi
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-behance
+                      entypo-behance
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-google-circles
+                      entypo-google-circles
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-vkontakte
+                      entypo-vkontakte
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-smashing
+                      entypo-smashing
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-sweden
+                      entypo-sweden
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-db-shape
+                      entypo-db-shape
+                  .icon-el.col-md-3.col-sm-4
+                    %a{:href => "#"}
+                      %i.entypo-up-thin
+                      entypo-up-thin
+        / Footer
+        %footer.main
+          \&copy; 2014
+          %strong Neon
+          Admin Theme by
+          %a{:href => "http://laborator.co", :target => "_blank"} Laborator
+      #chat.fixed{"data-current-user" => "Art Ramadani", "data-max-chat-history" => "25", "data-order-by-status" => "1"}
+        .chat-inner
+          %h2.chat-header
+            %a.chat-close{"data-animate" => "1", :href => "#"}
+              %i.entypo-cancel
+            %i.entypo-users
+            Chat
+            %span.badge.badge-success.is-hidden 0
+          #group-1.chat-group
+            %strong Favorites
+            %a#sample-user-123{"data-conversation-history" => "#sample_history", :href => "#"}
+              %span.user-status.is-online
+              %em Catherine J. Watkins
+            %a{:href => "#"}
+              %span.user-status.is-online
+              %em Nicholas R. Walker
+            %a{:href => "#"}
+              %span.user-status.is-busy
+              %em Susan J. Best
+            %a{:href => "#"}
+              %span.user-status.is-offline
+              %em Brandon S. Young
+            %a{:href => "#"}
+              %span.user-status.is-idle
+              %em Fernando G. Olson
+          #group-2.chat-group
+            %strong Work
+            %a{:href => "#"}
+              %span.user-status.is-offline
+              %em Robert J. Garcia
+            %a{"data-conversation-history" => "#sample_history_2", :href => "#"}
+              %span.user-status.is-offline
+              %em Daniel A. Pena
+            %a{:href => "#"}
+              %span.user-status.is-busy
+              %em Rodrigo E. Lozano
+          #group-3.chat-group
+            %strong Social
+            %a{:href => "#"}
+              %span.user-status.is-busy
+              %em Velma G. Pearson
+            %a{:href => "#"}
+              %span.user-status.is-offline
+              %em Margaret R. Dedmon
+            %a{:href => "#"}
+              %span.user-status.is-online
+              %em Kathleen M. Canales
+            %a{:href => "#"}
+              %span.user-status.is-offline
+              %em Tracy J. Rodriguez
+        / conversation template
+        .chat-conversation
+          .conversation-header
+            %a.conversation-close{:href => "#"}
+              %i.entypo-cancel
+            %span.user-status
+            %span.display-name
+            %small
+          %ul.conversation-body
+          .chat-textarea
+            %textarea.form-control.autogrow{:placeholder => "Type your message"}
+      / Chat Histories
+      %ul#sample_history.chat-history
+        %li
+          %span.user Art Ramadani
+          %p Are you here?
+          %span.time 09:00
+        %li.opponent
+          %span.user Catherine J. Watkins
+          %p This message is pre-queued.
+          %span.time 09:25
+        %li.opponent
+          %span.user Catherine J. Watkins
+          %p Whohoo!
+          %span.time 09:26
+        %li.opponent.unread
+          %span.user Catherine J. Watkins
+          %p Do you like it?
+          %span.time 09:27
+      / Chat Histories
+      %ul#sample_history_2.chat-history
+        %li.opponent.unread
+          %span.user Daniel A. Pena
+          %p I am going out.
+          %span.time 08:21
+        %li.opponent.unread
+          %span.user Daniel A. Pena
+          %p Call me when you see this message.
+          %span.time 08:27
+    %link{:href => "assets/css/font-icons/font-awesome/css/font-awesome.min.css", :rel => "stylesheet"}/
+    / Bottom Scripts
+    %script{:src => "assets/js/gsap/main-gsap.js"}
+    %script{:src => "assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"}
+    %script{:src => "assets/js/bootstrap.js"}
+    %script{:src => "assets/js/joinable.js"}
+    %script{:src => "assets/js/resizeable.js"}
+    %script{:src => "assets/js/neon-api.js"}
+    %script{:src => "assets/js/tocify/jquery.tocify.min.js"}
+    %script{:src => "assets/js/neon-chat.js"}
+    %script{:src => "assets/js/neon-custom.js"}
+    %script{:src => "assets/js/neon-demo.js"}

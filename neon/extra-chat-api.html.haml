@@ -1,0 +1,1473 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %meta{:content => "Neon Admin Panel", :name => "description"}/
+    %meta{:content => "", :name => "author"}/
+    %title Neon | Chat API
+    %link{:href => "assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/font-icons/entypo/css/entypo.css", :rel => "stylesheet"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic", :rel => "stylesheet"}/
+    %link{:href => "assets/css/bootstrap.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/neon-core.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/neon-theme.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/neon-forms.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/custom.css", :rel => "stylesheet"}/
+    %script{:src => "assets/js/jquery-1.11.0.min.js"}
+    /[if lt IE 9] <script src="assets/js/ie8-responsive-file-warning.js"></script>
+    / HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    /[if lt IE 9]
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  %body.page-body{"data-url" => "http://neon.dev"}
+    .page-container
+      / add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always
+      .sidebar-menu
+        %header.logo-env
+          / logo
+          .logo
+            %a{:href => "index.html"}
+              %img{:alt => "", :src => "assets/images/logo@2x.png", :width => "120"}/
+          / logo collapse icon
+          .sidebar-collapse
+            %a.sidebar-collapse-icon.with-animation{:href => "#"}
+              / add class "with-animation" if you want sidebar to have animation during expanding/collapsing transition
+              %i.entypo-menu
+          / open/close menu icon (do not remove if you want to enable menu on mobile devices)
+          .sidebar-mobile-menu.visible-xs
+            %a.with-animation{:href => "#"}
+              / add class "with-animation" to support animation
+              %i.entypo-menu
+        %ul#main-menu
+          / add class "multiple-expanded" to allow multiple submenus to open
+          / class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active"
+          / Search Bar
+          %li#search
+            %form{:action => "", :method => "get"}
+              %input.search-input{:name => "q", :placeholder => "Search something...", :type => "text"}/
+              %button{:type => "submit"}
+                %i.entypo-search
+          %li
+            %a{:href => "index.html"}
+              %i.entypo-gauge
+              %span Dashboard
+            %ul
+              %li
+                %a{:href => "index.html"}
+                  %span Dashboard 1
+              %li
+                %a{:href => "dashboard-2.html"}
+                  %span Dashboard 2
+              %li
+                %a{:href => "dashboard-3.html"}
+                  %span Dashboard 3
+                  %span.badge.badge-secondary.badge-roundless New
+              %li
+                %a{:href => "skin-black.html"}
+                  %span Skins
+                %ul
+                  %li
+                    %a{:href => "skin-black.html"}
+                      %span Black Skin
+                  %li
+                    %a{:href => "skin-white.html"}
+                      %span White Skin
+                  %li
+                    %a{:href => "skin-purple.html"}
+                      %span Purple Skin
+                  %li
+                    %a{:href => "skin-cafe.html"}
+                      %span Cafe Skin
+                  %li
+                    %a{:href => "skin-red.html"}
+                      %span Red Skin
+                  %li
+                    %a{:href => "skin-green.html"}
+                      %span Green Skin
+                  %li
+                    %a{:href => "skin-yellow.html"}
+                      %span Yellow Skin
+                  %li
+                    %a{:href => "skin-blue.html"}
+                      %span Blue Skin
+              %li
+                %a{:href => "highlights.html"}
+                  %span What's New
+                  %span.badge.badge-success.badge-roundless v1.5.1
+          %li
+            %a{:href => "layout-api.html"}
+              %i.entypo-layout
+              %span Layouts
+            %ul
+              %li
+                %a{:href => "layout-api.html"}
+                  %span Layout API
+                  %span.badge.badge-warning.badge-roundless Updated
+              %li
+                %a{:href => "layout-collapsed-sidebar.html"}
+                  %span Collapsed Sidebar
+              %li
+                %a{:href => "layout-fixed-sidebar.html"}
+                  %span Fixed Sidebar
+              %li
+                %a{:href => "layout-chat-open.html"}
+                  %span Chat Open
+              %li
+                %a{:href => "layout-horizontal-menu-boxed.html"}
+                  %span Horizontal Menu Boxed
+              %li
+                %a{:href => "layout-horizontal-menu-fluid.html"}
+                  %span Horizontal Menu Fluid
+              %li
+                %a{:href => "layout-mixed-menus.html"}
+                  %span Mixed Menus
+              %li
+                %a{:href => "layout-right-sidebar.html"}
+                  %span Right Sidebar
+                  %span.badge.badge-secondary.badge-roundless New
+              %li
+                %a{:href => "layout-both-menus-right-sidebar.html"}
+                  %span Both Menus (Right Sidebar)
+                  %span.badge.badge-secondary.badge-roundless New
+              %li
+                %a{:href => "layout-page-transition-fade.html"}
+                  %span Page Enter Transitions
+                %ul
+                  %li
+                    %a{:href => "layout-page-transition-fade.html"}
+                      %span Fade Scale
+                  %li
+                    %a{:href => "layout-page-transition-left-in.html"}
+                      %span Left In
+                  %li
+                    %a{:href => "layout-page-transition-right-in.html"}
+                      %span Right In
+                  %li
+                    %a{:href => "layout-page-transition-fade-only.html"}
+                      %span Fade Only
+          %li
+            %a{:href => "index.html", :target => "_blank"}
+              %i.entypo-monitor
+              %span Frontend
+              %span.badge.badge-secondary.badge-roundless New
+          %li
+            %a{:href => "ui-panels.html"}
+              %i.entypo-newspaper
+              %span UI Elements
+            %ul
+              %li
+                %a{:href => "ui-panels.html"}
+                  %span Panels
+              %li
+                %a{:href => "ui-tiles.html"}
+                  %span Tiles
+              %li
+                %a{:href => "forms-buttons.html"}
+                  %span Buttons
+              %li
+                %a{:href => "ui-typography.html"}
+                  %span Typography
+              %li
+                %a{:href => "ui-tabs-accordions.html"}
+                  %span Tabs &amp; Accordions
+              %li
+                %a{:href => "ui-tooltips-popovers.html"}
+                  %span Tooltips &amp; Popovers
+              %li
+                %a{:href => "ui-navbars.html"}
+                  %span Navbars
+              %li
+                %a{:href => "ui-breadcrumbs.html"}
+                  %span Breadcrumbs
+              %li
+                %a{:href => "ui-badges-labels.html"}
+                  %span Badges &amp; Labels
+              %li
+                %a{:href => "ui-progress-bars.html"}
+                  %span Progress Bars
+              %li
+                %a{:href => "ui-modals.html"}
+                  %span Modals
+              %li
+                %a{:href => "ui-blockquotes.html"}
+                  %span Blockquotes
+              %li
+                %a{:href => "ui-alerts.html"}
+                  %span Alerts
+              %li
+                %a{:href => "ui-pagination.html"}
+                  %span Pagination
+          %li
+            %a{:href => "mailbox.html"}
+              %i.entypo-mail
+              %span Mailbox
+              %span.badge.badge-secondary 8
+            %ul
+              %li
+                %a{:href => "mailbox.html"}
+                  %i.entypo-inbox
+                  %span Inbox
+              %li
+                %a{:href => "mailbox-compose.html"}
+                  %i.entypo-pencil
+                  %span Compose Message
+              %li
+                %a{:href => "mailbox-message.html"}
+                  %i.entypo-attach
+                  %span View Message
+          %li
+            %a{:href => "forms-main.html"}
+              %i.entypo-doc-text
+              %span Forms
+            %ul
+              %li
+                %a{:href => "forms-main.html"}
+                  %span Basic Elements
+              %li
+                %a{:href => "forms-advanced.html"}
+                  %span Advanced Plugins
+                  %span.badge.badge-warning.badge-roundless Updated
+              %li
+                %a{:href => "forms-wizard.html"}
+                  %span Form Wizard
+              %li
+                %a{:href => "forms-validation.html"}
+                  %span Data Validation
+              %li
+                %a{:href => "forms-masks.html"}
+                  %span Input Masks
+              %li
+                %a{:href => "forms-sliders.html"}
+                  %span Sliders
+              %li
+                %a{:href => "forms-file-upload.html"}
+                  %span File Upload
+              %li
+                %a{:href => "forms-wysiwyg.html"}
+                  %span Editors
+                  %span.badge.badge-warning.badge-roundless Updated
+          %li
+            %a{:href => "tables-main.html"}
+              %i.entypo-window
+              %span Tables
+            %ul
+              %li
+                %a{:href => "tables-main.html"}
+                  %span Basic Tables
+              %li
+                %a{:href => "tables-datatable.html"}
+                  %span Data Tables
+                  %span.badge.badge-warning.badge-roundless Updated
+          %li.opened.active
+            %a{:href => "extra-icons.html"}
+              %i.entypo-bag
+              %span Extra
+              %span.badge.badge-info.badge-roundless New Items
+            %ul
+              %li
+                %a{:href => "extra-icons.html"}
+                  %span Icons
+                  %span.badge.badge-success 3
+                %ul
+                  %li
+                    %a{:href => "extra-icons.html"}
+                      %span Font Awesome
+                  %li
+                    %a{:href => "extra-icons-entypo.html"}
+                      %span Entypo
+                  %li
+                    %a{:href => "extra-icons-glyphicons.html"}
+                      %span Glyph Icons
+              %li
+                %a{:href => "extra-portlets.html"}
+                  %span Portlets
+              %li
+                %a{:href => "extra-google-maps.html"}
+                  %span Maps
+                %ul
+                  %li
+                    %a{:href => "extra-google-maps.html"}
+                      %span Google Maps
+                  %li
+                    %a{:href => "extra-vector-maps.html"}
+                      %span Vector Maps
+              %li.active
+                %a{:href => "extra-chat-api.html"}
+                  %span Chat API
+              %li
+                %a{:href => "extra-calendar.html"}
+                  %span Calendar
+              %li
+                %a{:href => "extra-notes.html"}
+                  %span Notes
+              %li
+                %a{:href => "extra-lockscreen.html"}
+                  %span Lockscreen
+              %li
+                %a{:href => "extra-login.html"}
+                  %span Login
+                  %span.badge.badge-warning.badge-roundless Updated
+              %li
+                %a{:href => "extra-register.html"}
+                  %span Register
+                  %span.badge.badge-secondary.badge-roundless New
+              %li
+                %a{:href => "extra-invoice.html"}
+                  %span Invoice
+              %li
+                %a{:href => "extra-gallery.html"}
+                  %span Gallery
+                %ul
+                  %li
+                    %a{:href => "extra-gallery.html"}
+                      %span Albums
+                  %li
+                    %a{:href => "extra-gallery-single.html"}
+                      %span Single Album
+              %li
+                %a{:href => "extra-profile.html"}
+                  %span Profile
+              %li
+                %a{:href => "extra-404.html"}
+                  %span 404 Page
+              %li
+                %a{:href => "extra-blank-page.html"}
+                  %span Blank Page
+              %li
+                %a{:href => "extra-timeline.html"}
+                  %span Timeline
+              %li
+                %a{:href => "extra-timeline-centered.html"}
+                  %span Timeline Centered
+              %li
+                %a{:href => "extra-tocify.html"}
+                  %span Tocify
+              %li
+                %a{:href => "ui-notifications.html"}
+                  %span Notifications
+              %li
+                %a{:href => "extra-scrollbox.html"}
+                  %span Scrollbox
+              %li
+                %a{:href => "extra-image-crop.html"}
+                  %span Image Crop
+              %li
+                %a{:href => "extra-search.html"}
+                  %span Search Page
+                  %span.badge.badge-secondary.badge-roundless New
+              %li
+                %a{:href => "extra-language-selector.html"}
+                  %span Language Selector
+                  %span.badge.badge-secondary.badge-roundless New
+          %li
+            %a{:href => "charts.html"}
+              %i.entypo-chart-bar
+              %span Charts
+          %li
+            %a{:href => "#"}
+              %i.entypo-flow-tree
+              %span Menu Levels
+            %ul
+              %li
+                %a{:href => "#"}
+                  %i.entypo-flow-line
+                  %span Menu Level 1.1
+              %li
+                %a{:href => "#"}
+                  %i.entypo-flow-line
+                  %span Menu Level 1.2
+              %li
+                %a{:href => "#"}
+                  %i.entypo-flow-line
+                  %span Menu Level 1.3
+                %ul
+                  %li
+                    %a{:href => "#"}
+                      %i.entypo-flow-parallel
+                      %span Menu Level 2.1
+                  %li
+                    %a{:href => "#"}
+                      %i.entypo-flow-parallel
+                      %span Menu Level 2.2
+                    %ul
+                      %li
+                        %a{:href => "#"}
+                          %i.entypo-flow-cascade
+                          %span Menu Level 3.1
+                        %ul
+                          %li
+                            %a{:href => "#"}
+                              %i.entypo-flow-branch
+                              %span Menu Level 4.1
+                      %li
+                        %a{:href => "#"}
+                          %i.entypo-flow-cascade
+                          %span Menu Level 3.2
+                  %li
+                    %a{:href => "#"}
+                      %i.entypo-flow-parallel
+                      %span Menu Level 2.3
+      .main-content
+        .row
+          / Profile Info and Notifications
+          .col-md-6.col-sm-8.clearfix
+            %ul.user-info.pull-left.pull-none-xsm
+              / Profile Info
+              %li.profile-info.dropdown
+                / add class "pull-right" if you want to place this from right
+                %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                  %img.img-circle{:alt => "", :src => "assets/images/thumb-1@2x.png", :width => "44"}/
+                  Art Ramadani
+                %ul.dropdown-menu
+                  / Reverse Caret
+                  %li.caret
+                  / Profile sub-links
+                  %li
+                    %a{:href => "#"}
+                      %i.entypo-user
+                      Edit Profile
+                  %li
+                    %a{:href => "mailbox.html"}
+                      %i.entypo-mail
+                      Inbox
+                  %li
+                    %a{:href => "extra-calendar.html"}
+                      %i.entypo-calendar
+                      Calendar
+                  %li
+                    %a{:href => "#"}
+                      %i.entypo-clipboard
+                      Tasks
+            %ul.user-info.pull-left.pull-right-xs.pull-none-xsm
+              / Raw Notifications
+              %li.notifications.dropdown
+                %a.dropdown-toggle{"data-close-others" => "true", "data-hover" => "dropdown", "data-toggle" => "dropdown", :href => "#"}
+                  %i.entypo-attention
+                  %span.badge.badge-info 6
+                %ul.dropdown-menu
+                  %li.top
+                    %p.small
+                      %a.pull-right{:href => "#"} Mark all Read
+                      You have
+                      %strong 3
+                      new notifications.
+                  %li
+                    %ul.dropdown-menu-list.scroller
+                      %li.unread.notification-success
+                        %a{:href => "#"}
+                          %i.entypo-user-add.pull-right
+                          %span.line
+                            %strong New user registered
+                          %span.line.small
+                            30 seconds ago
+                      %li.unread.notification-secondary
+                        %a{:href => "#"}
+                          %i.entypo-heart.pull-right
+                          %span.line
+                            %strong Someone special liked this
+                          %span.line.small
+                            2 minutes ago
+                      %li.notification-primary
+                        %a{:href => "#"}
+                          %i.entypo-user.pull-right
+                          %span.line
+                            %strong Privacy settings have been changed
+                          %span.line.small
+                            3 hours ago
+                      %li.notification-danger
+                        %a{:href => "#"}
+                          %i.entypo-cancel-circled.pull-right
+                          %span.line
+                            John cancelled the event
+                          %span.line.small
+                            9 hours ago
+                      %li.notification-info
+                        %a{:href => "#"}
+                          %i.entypo-info.pull-right
+                          %span.line
+                            The server is status is stable
+                          %span.line.small
+                            yesterday at 10:30am
+                      %li.notification-warning
+                        %a{:href => "#"}
+                          %i.entypo-rss.pull-right
+                          %span.line
+                            New comments waiting approval
+                          %span.line.small
+                            last week
+                  %li.external
+                    %a{:href => "#"} View all notifications
+              / Message Notifications
+              %li.notifications.dropdown
+                %a.dropdown-toggle{"data-close-others" => "true", "data-hover" => "dropdown", "data-toggle" => "dropdown", :href => "#"}
+                  %i.entypo-mail
+                  %span.badge.badge-secondary 10
+                %ul.dropdown-menu
+                  %li
+                    %ul.dropdown-menu-list.scroller
+                      %li.active
+                        %a{:href => "#"}
+                          %span.image.pull-right
+                            %img.img-circle{:alt => "", :src => "assets/images/thumb-1.png"}/
+                          %span.line
+                            %strong Luc Chartier
+                            \- yesterday
+                          %span.line.desc.small
+                            This ain’t our first item, it is the best of the rest.
+                      %li.active
+                        %a{:href => "#"}
+                          %span.image.pull-right
+                            %img.img-circle{:alt => "", :src => "assets/images/thumb-2.png"}/
+                          %span.line
+                            %strong Salma Nyberg
+                            \- 2 days ago
+                          %span.line.desc.small
+                            Oh he decisively impression attachment friendship so if everything.
+                      %li
+                        %a{:href => "#"}
+                          %span.image.pull-right
+                            %img.img-circle{:alt => "", :src => "assets/images/thumb-3.png"}/
+                          %span.line
+                            Hayden Cartwright
+                            \- a week ago
+                          %span.line.desc.small
+                            Whose her enjoy chief new young. Felicity if ye required likewise so doubtful.
+                      %li
+                        %a{:href => "#"}
+                          %span.image.pull-right
+                            %img.img-circle{:alt => "", :src => "assets/images/thumb-4.png"}/
+                          %span.line
+                            Sandra Eberhardt
+                            \- 16 days ago
+                          %span.line.desc.small
+                            On so attention necessary at by provision otherwise existence direction.
+                  %li.external
+                    %a{:href => "mailbox.html"} All Messages
+              / Task Notifications
+              %li.notifications.dropdown
+                %a.dropdown-toggle{"data-close-others" => "true", "data-hover" => "dropdown", "data-toggle" => "dropdown", :href => "#"}
+                  %i.entypo-list
+                  %span.badge.badge-warning 1
+                %ul.dropdown-menu
+                  %li.top
+                    %p You have 6 pending tasks
+                  %li
+                    %ul.dropdown-menu-list.scroller
+                      %li
+                        %a{:href => "#"}
+                          %span.task
+                            %span.desc Procurement
+                            %span.percent 27%
+                          %span.progress
+                            %span.progress-bar.progress-bar-success{:style => "width: 27%;"}
+                              %span.sr-only 27% Complete
+                      %li
+                        %a{:href => "#"}
+                          %span.task
+                            %span.desc App Development
+                            %span.percent 83%
+                          %span.progress.progress-striped
+                            %span.progress-bar.progress-bar-danger{:style => "width: 83%;"}
+                              %span.sr-only 83% Complete
+                      %li
+                        %a{:href => "#"}
+                          %span.task
+                            %span.desc HTML Slicing
+                            %span.percent 91%
+                          %span.progress
+                            %span.progress-bar.progress-bar-success{:style => "width: 91%;"}
+                              %span.sr-only 91% Complete
+                      %li
+                        %a{:href => "#"}
+                          %span.task
+                            %span.desc Database Repair
+                            %span.percent 12%
+                          %span.progress.progress-striped
+                            %span.progress-bar.progress-bar-warning{:style => "width: 12%;"}
+                              %span.sr-only 12% Complete
+                      %li
+                        %a{:href => "#"}
+                          %span.task
+                            %span.desc Backup Create Progress
+                            %span.percent 54%
+                          %span.progress.progress-striped
+                            %span.progress-bar.progress-bar-info{:style => "width: 54%;"}
+                              %span.sr-only 54% Complete
+                      %li
+                        %a{:href => "#"}
+                          %span.task
+                            %span.desc Upgrade Progress
+                            %span.percent 17%
+                          %span.progress.progress-striped
+                            %span.progress-bar.progress-bar-important{:style => "width: 17%;"}
+                              %span.sr-only 17% Complete
+                  %li.external
+                    %a{:href => "#"} See all tasks
+          / Raw Links
+          .col-md-6.col-sm-4.clearfix.hidden-xs
+            %ul.list-inline.links-list.pull-right
+              / Language Selector
+              %li.dropdown.language-selector
+                Language: &nbsp;
+                %a.dropdown-toggle{"data-close-others" => "true", "data-toggle" => "dropdown", :href => "#"}
+                  %img{:src => "assets/images/flag-uk.png"}/
+                %ul.dropdown-menu.pull-right
+                  %li
+                    %a{:href => "#"}
+                      %img{:src => "assets/images/flag-de.png"}/
+                      %span Deutsch
+                  %li.active
+                    %a{:href => "#"}
+                      %img{:src => "assets/images/flag-uk.png"}/
+                      %span English
+                  %li
+                    %a{:href => "#"}
+                      %img{:src => "assets/images/flag-fr.png"}/
+                      %span François
+                  %li
+                    %a{:href => "#"}
+                      %img{:src => "assets/images/flag-al.png"}/
+                      %span Shqip
+                  %li
+                    %a{:href => "#"}
+                      %img{:src => "assets/images/flag-es.png"}/
+                      %span Español
+              %li.sep
+              %li
+                %a{"data-animate" => "1", "data-collapse-sidebar" => "1", "data-toggle" => "chat", :href => "#"}
+                  %i.entypo-chat
+                  Chat
+                  %span.badge.badge-success.chat-notifications-badge.is-hidden 0
+              %li.sep
+              %li
+                %a{:href => "extra-login.html"}
+                  Log Out
+                  %i.entypo-logout.right
+        %hr/
+        .jumbotron
+          %h1 Chat API
+          %p
+            Neon Chat is simple
+            %strong API Chat
+            platform developed by
+            %a{:href => "http://www.laborator.co", :target => "_blank"}
+              %strong Laborator
+            that you can use to integrate to your own chat system. It provides bunch of options you can use to support full chat platform. Here you can test the functions and know about their usage details.
+          %p
+            %br/
+            %a.btn.btn-primary.btn-lg{:href => "#markup", :role => "button"} See the Markup
+        .row
+          .col-md-6
+            %h3 Toggle Chat
+            %p
+              Link that toggles chat. Just add this attribute to any element:
+              %code data-toggle="chat"
+            %p
+              %a.btn.btn-default{"data-toggle" => "chat", :href => "#"} Toggle Chat
+              %a.btn.btn-default.chat-open{:href => "#"} Force Open
+              %a.btn.btn-default.chat-close{:href => "#"} Force Close
+            %br/
+            %h4 With Animation
+            %p
+              %a.btn.btn-default{"data-animate" => "1", "data-toggle" => "chat", :href => "#"} Toggle Chat w/ Animation
+              %a.btn.btn-default.chat-open{"data-animate" => "1", :href => "#"} Force Open
+              %a.btn.btn-default.chat-close{"data-animate" => "1", :href => "#"} Force Close
+            %br/
+            %h4 Toggle Left Sidebar
+            %p This will close the sidebar (if it is already open) when chat shows.
+            %p
+              %a.btn.btn-default{"data-collapse-sidebar" => "1", "data-toggle" => "chat", :href => "#"} Toggle Chat w/ Sidebar
+              %a.btn.btn-default{"data-animate" => "1", "data-collapse-sidebar" => "1", "data-toggle" => "chat", :href => "#"} Toggle Chat w/ Sidebar (Animated)
+          .col-md-6
+            %h3 See how its implemented
+            %strong Code for Toggle Chat
+            %pre &lt;a href=&quot;#&quot; class=&quot;btn btn-default&quot; data-toggle=&quot;chat&quot;&gt;Toggle Chat&lt;/a&gt;
+            %br/
+            %strong Force open
+            %pre &lt;a href=&quot;#&quot; class=&quot;btn btn-default chat-open&quot;&gt;Force Open&lt;/a&gt;
+            %br/
+            %strong Force close
+            %pre &lt;a href=&quot;#&quot; class=&quot;btn btn-default chat-close&quot;&gt;Force Close&lt;/a&gt;
+            %br/
+            %strong The above buttons with animation feature
+            %pre &lt;a href=&quot;#&quot; class=&quot;btn btn-default&quot; data-toggle=&quot;chat&quot; data-animate=&quot;1&quot;&gt;Toggle Chat w/ Animation&lt;/a&gt;
+            %br/
+            %strong Toggle Chat + Sidebar
+            %pre &lt;a href=&quot;#&quot; class=&quot;btn btn-default&quot; data-toggle=&quot;chat&quot; data-collapse-sidebar=&quot;1&quot;&gt;Toggle Chat w/ Sidebar&lt;/a&gt;
+            %br/
+            %strong To add animations simply add this attribute:
+            %pre data-animate="1"
+        %br/
+        .row
+          .col-md-7
+            %h3 Chat Bubble
+            %p
+              If you want to receive chat notifications, simply add this class
+              %code .chat-notifications-badge
+              to any element, each time the new message is submitted it will be updated automatically.
+            %br/
+            %p
+              Exmaple:
+              %span.badge.badge-danger.chat-notifications-badge.is-hidden
+              %br/
+              %br/
+              %strong Code
+            %pre &lt;span class=&quot;badge badge-danger chat-notifications-badge is-hidden&quot;&gt;&lt;/span&gt;
+          .col-md-5
+            %h3 Always Visible Chat
+            %p
+              If you want to have the chat always visible on the right sidebar add class
+              %code .chat-visible
+              to
+              %code .page-container
+              element.
+        %br/
+        .row
+          .col-md-12
+            %h3#markup Markup
+            %p
+              Adding chat functionality to Neon theme its easy. Add
+              %code #chat
+              container inside
+              %code .page-content
+              element. Here is an examlpe:
+            %pre
+              :preserve
+                &lt;div id=&quot;chat&quot; class=&quot;fixed&quot; data-current-user=&quot;Art Ramadani&quot; data-order-by-status=&quot;1&quot; data-max-chat-history=&quot;25&quot;&gt;
+                	
+                	&lt;div class=&quot;chat-inner&quot;&gt;
+                	
+                		
+                		&lt;h2 class=&quot;chat-header&quot;&gt;
+                			&lt;a href=&quot;#&quot; class=&quot;chat-close&quot;&gt;&lt;i class=&quot;entypo-cancel&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                			
+                			&lt;i class=&quot;entypo-users&quot;&gt;&lt;/i&gt;
+                			Chat
+                			&lt;span class=&quot;badge badge-success is-hidden&quot;&gt;0&lt;/span&gt;
+                		&lt;/h2&gt;
+                		
+                		
+                		&lt;div class=&quot;chat-group&quot; id=&quot;group-1&quot;&gt;
+                			&lt;strong&gt;Favorites&lt;/strong&gt;
+                			
+                			&lt;a href=&quot;#&quot; id=&quot;sample-user-123&quot; data-conversation-history=&quot;#sample_history&quot;&gt;&lt;span class=&quot;user-status is-offline&quot;&gt;&lt;/span&gt; &lt;em&gt;Catherine J. Watkins&lt;/em&gt;&lt;/a&gt;
+                			&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;user-status is-online&quot;&gt;&lt;/span&gt; &lt;em&gt;Nicholas R. Walker&lt;/em&gt;&lt;/a&gt;
+                			&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;user-status is-online&quot;&gt;&lt;/span&gt; &lt;em&gt;Susan J. Best&lt;/em&gt;&lt;/a&gt;
+                			&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;user-status is-offline&quot;&gt;&lt;/span&gt; &lt;em&gt;Brandon S. Young&lt;/em&gt;&lt;/a&gt;
+                			&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;user-status is-idle&quot;&gt;&lt;/span&gt; &lt;em&gt;Fernando G. Olson&lt;/em&gt;&lt;/a&gt;
+                		&lt;/div&gt;
+                	
+                	&lt;/div&gt;
+                	
+                	&lt;!-- conversation template --&gt;
+                	&lt;div class=&quot;chat-conversation&quot;&gt;
+                		
+                		&lt;div class=&quot;conversation-header&quot;&gt;
+                			&lt;a href=&quot;#&quot; class=&quot;conversation-close&quot;&gt;&lt;i class=&quot;entypo-cancel&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                			
+                			&lt;span class=&quot;user-status&quot;&gt;&lt;/span&gt;
+                			&lt;span class=&quot;display-name&quot;&gt;&lt;/span&gt; 
+                			&lt;small&gt;&lt;/small&gt;
+                		&lt;/div&gt;
+                		
+                		&lt;ul class=&quot;conversation-body&quot;&gt;	
+                		&lt;/ul&gt;
+                		
+                		&lt;div class=&quot;chat-textarea&quot;&gt;
+                			&lt;textarea class=&quot;form-control autogrow&quot; placeholder=&quot;Type your message&quot;&gt;&lt;/textarea&gt;
+                		&lt;/div&gt;
+                		
+                	&lt;/div&gt;
+                	
+                &lt;/div&gt;
+                
+                
+                &lt;!-- Chat Histories --&gt;
+                &lt;div class=&quot;chat-history&quot; id=&quot;sample_history&quot;&gt;
+                	&lt;li&gt;
+                		&lt;span class=&quot;user&quot;&gt;Art Ramadani&lt;/span&gt;
+                		&lt;p&gt;Are you here?&lt;/p&gt;
+                		&lt;span class=&quot;time&quot;&gt;09:00&lt;/span&gt;
+                	&lt;/li&gt;
+                	
+                	&lt;li class=&quot;opponent&quot;&gt;
+                		&lt;span class=&quot;user&quot;&gt;Catherine J. Watkins&lt;/span&gt;
+                		&lt;p&gt;This message is pre-queued.&lt;/p&gt;
+                		&lt;span class=&quot;time&quot;&gt;09:25&lt;/span&gt;
+                	&lt;/li&gt;
+                	
+                	&lt;li class=&quot;opponent&quot;&gt;
+                		&lt;span class=&quot;user&quot;&gt;Catherine J. Watkins&lt;/span&gt;
+                		&lt;p&gt;Whohoo!&lt;/p&gt;
+                		&lt;span class=&quot;time&quot;&gt;09:26&lt;/span&gt;
+                	&lt;/li&gt;
+                	
+                	&lt;li class=&quot;opponent unread&quot;&gt;
+                		&lt;span class=&quot;user&quot;&gt;Catherine J. Watkins&lt;/span&gt;
+                		&lt;p&gt;Do you like it?&lt;/p&gt;
+                		&lt;span class=&quot;time&quot;&gt;09:27&lt;/span&gt;
+                	&lt;/li&gt;
+                &lt;/div&gt;
+                
+                
+                
+                
+                &lt;!-- Chat Histories --&gt;
+                &lt;div class=&quot;chat-history&quot; id=&quot;sample_history_2&quot;&gt;
+                	&lt;li class=&quot;opponent unread&quot;&gt;
+                		&lt;span class=&quot;user&quot;&gt;Daniel A. Pena&lt;/span&gt;
+                		&lt;p&gt;I am going out.&lt;/p&gt;
+                		&lt;span class=&quot;time&quot;&gt;08:21&lt;/span&gt;
+                	&lt;/li&gt;
+                	
+                	&lt;li class=&quot;opponent unread&quot;&gt;
+                		&lt;span class=&quot;user&quot;&gt;Daniel A. Pena&lt;/span&gt;
+                		&lt;p&gt;Call me when you see this message.&lt;/p&gt;
+                		&lt;span class=&quot;time&quot;&gt;08:27&lt;/span&gt;
+                	&lt;/li&gt;
+                &lt;/div&gt;            %br/
+            %h4#chat-api-order-contacts
+              Chat Attributes for
+              %em #chat
+              container
+            %table.table.table-bordered
+              %thead
+                %tr
+                  %th{:width => "15%"} Attribute Name
+                  %th Description
+              %tbody
+                %tr
+                  %td
+                    %span.label.label-info data-current-user
+                  %td The current user display name which will be sent messages from.
+                %tr
+                  %td
+                    %span.label.label-info data-order-by-status
+                  %td
+                    You can decide wether you want to sort users in groups by their status by adding
+                    %strong 1
+                    value to this attribute.
+                    Status ordering: 1 online, 2 busy, 3 idle, 4 offline. To change this ordering edit
+                    %strong neon-chat.js
+                    file.
+                %tr
+                  %td
+                    %span.label.label-info data-max-chat-history
+                  %td
+                    For each chat conversation there is a limit of N messages. Here you can define how many messages per conversation can be stored at maximum. Default value is: 25 records.
+            %br/
+            %h4 Group Attributes
+            %p
+              Chat groups are required! So you should at least have one group. For example you can name it
+              %em Contacts
+              or whatever. To create chat groups simply add new element with
+              %code .chat-group
+              class and you are done. To add a name to this group insert the
+              %code &lt;strong&gt;
+              tag as first element of the group with the group name.
+              Inside chat groups you can insert the contacts.
+            %table.table.table-bordered
+              %thead
+                %tr
+                  %th{:width => "15%"} Attribute Name
+                  %th Description
+              %tbody
+                %tr
+                  %td
+                    %span.label.label-info id
+                  %td
+                    Group ID is required if you want to manipulate the group via Neon Chat API. Sample example
+                    %code neonChat.removeGroup("sample-group-id");
+            %br/
+            %h4 Contact Attributes
+            %p
+              After you have created the group now you can append the chat contacts to it. Simply add
+              %code &lt;a&gt;
+              elements, for example:
+            %pre &lt;a href=&quot;#&quot; id=&quot;user-id-123&quot;&gt;&lt;span class=&quot;user-status is-online&quot;&gt;&lt;/span&gt; &lt;em&gt;Nicholas R. Walker&lt;/em&gt;&lt;/a&gt;
+            %br/
+            User status element is required inside the link element. For each user define the status, example:
+            = succeed "," do
+              %code &lt;span class=&quot;user-status is-busy&quot;&gt;&lt;/span&gt;
+            %code &lt;span class=&quot;user-status is-idle&quot;&gt;&lt;/span&gt;
+            or
+            %code &lt;span class=&quot;user-status is-offline&quot;&gt;&lt;/span&gt;
+            %br/
+            %br/
+            %table.table.table-bordered
+              %thead
+                %tr
+                  %th{:width => "15%"} Attribute Name
+                  %th Description
+              %tbody
+                %tr
+                  %td
+                    %span.label.label-info id
+                  %td
+                    User ID is required if you want to manipulate the group via Neon Chat API, by default this API will automatically assign an ID to each contact.
+                    = succeed "Sample" do
+                      %br/
+                    example
+                    %code neonChat.getUser("user-123");
+                    or
+                    %code neonChat.setStatus("user-123", "offline");
+                    or
+                    %code neonChat.open("user-123");
+                %tr
+                  %td
+                    %span.label.label-info data-conversation-history
+                  %td
+                    You can pre-load Chat History for any contact by simply specifying this attribute. Inside the attribute apply the ID of chat conversation.
+                    %br/
+                    %br/
+                    Here is an example:
+                    %pre
+                      :preserve
+                        &lt;a href=&quot;#&quot; data-conversation-history=&quot;#sample_history&quot;&gt;&lt;span class=&quot;user-status is-offline&quot;&gt;&lt;/span&gt; &lt;em&gt;Catherine J. Watkins&lt;/em&gt;&lt;/a&gt;
+                        
+                        
+                        &lt;!-- Chat History for this user --&gt;
+                        &lt;div class=&quot;chat-history&quot; id=&quot;sample_history&quot;&gt;
+                        	&lt;li&gt;
+                        		&lt;span class=&quot;user&quot;&gt;Art Ramadani&lt;/span&gt;
+                        		&lt;p&gt;Are you here?&lt;/p&gt;
+                        		&lt;span class=&quot;time&quot;&gt;09:00&lt;/span&gt;
+                        	&lt;/li&gt;
+                        	
+                        	&lt;li class=&quot;opponent&quot;&gt;
+                        		&lt;span class=&quot;user&quot;&gt;Catherine J. Watkins&lt;/span&gt;
+                        		&lt;p&gt;This message is pre-queued.&lt;/p&gt;
+                        		&lt;span class=&quot;time&quot;&gt;09:25&lt;/span&gt;
+                        	&lt;/li&gt;
+                        	
+                        	&lt;li class=&quot;opponent&quot;&gt;
+                        		&lt;span class=&quot;user&quot;&gt;Catherine J. Watkins&lt;/span&gt;
+                        		&lt;p&gt;Whohoo!&lt;/p&gt;
+                        		&lt;span class=&quot;time&quot;&gt;09:26&lt;/span&gt;
+                        	&lt;/li&gt;
+                        	
+                        	&lt;li class=&quot;opponent unread&quot;&gt;
+                        		&lt;span class=&quot;user&quot;&gt;Faruk zjermi&lt;/span&gt;
+                        		&lt;p&gt;Do you like it?&lt;/p&gt;
+                        		&lt;span class=&quot;time&quot;&gt;09:27&lt;/span&gt;
+                        	&lt;/li&gt;
+                        &lt;/div&gt;        %br/
+        .row
+          .col-md-12
+            %h2 API Functions
+            / API Functions
+            %table.table.table-bordered
+              %thead
+                %tr
+                  %th Function Name
+                  %th Description and Usage Details
+              %tbody
+                %tr
+                  %td
+                    %h4 neonChat.showChat(animated)
+                  %td.middle-align
+                    This function shows the chat contacts container.
+                    = succeed "Specifying" do
+                      %br/
+                    %code animated
+                    attribute with
+                    %code true
+                    value, will add animation.
+                    %br/
+                    %br/
+                    Example:
+                    %pre neonChat.showChat(true);
+                    %a{:href => "javascript:neonChat.showChat(true);"} Try it!
+                %tr
+                  %td
+                    %h4 neonChat.hideChat(animated)
+                  %td.middle-align
+                    This function will hide the chat container.
+                    = succeed "Specifying" do
+                      %br/
+                    %code animated
+                    attribute with
+                    %code true
+                    value, will add animation.
+                    %br/
+                    %br/
+                    Example:
+                    %pre neonChat.hideChat(false);
+                    %a{:href => "javascript:neonChat.hideChat(false);"} Try it!
+                %tr
+                  %td
+                    %h4 neonChat.toggleChat(animated, collapse_sidebar)
+                  %td.middle-align
+                    It the mix of two above functions, which will decide whether to open it if its closed or close it if its opened.
+                    = succeed "Attribute:" do
+                      %br/
+                    %code animated
+                    applying
+                    %code true
+                    value, will add animation.
+                    = succeed "Attribute:" do
+                      %br/
+                    %code collapse_sidebar
+                    applying
+                    %code true
+                    value, will hide the left sidebar (if its already open) or will show the sidebar if the chat is closed.
+                    %br/
+                    %br/
+                    Example:
+                    %pre neonChat.toggleChat(false, true);
+                    %a{:href => "javascript:neonChat.toggleChat(false, true);"} Try it!
+                %tr
+                  %td
+                    %h4 neonChat.open(user_id)
+                  %td.middle-align
+                    Opens chat conversation window for
+                    = succeed "." do
+                      %code user_id
+                    User ID can be the group element
+                    %code &lt;a&gt;
+                    or id of the element inside chat group.
+                    %br/
+                    %br/
+                    Example:
+                    %pre
+                      :preserve
+                        // Primary form
+                        neonChat.open(&quot;sample-user-123&quot;);
+                        
+                        // Secondary form
+                        neonChat.open($(&quot;.chat-group a#sample-user-123&quot;));
+                    %a{:href => "javascript:neonChat.showChat(false); neonChat.open($('.chat-group a#sample-user-123'));"} Try it!
+                %tr
+                  %td
+                    %h4 neonChat.close()
+                  %td.middle-align
+                    Will close current active chat conversation window, no attributes are required.
+                    %br/
+                    %br/
+                    Example:
+                    %pre neonChat.close();
+                    %a{:href => "javascript:neonChat.close();"} Try it!
+                %tr
+                  %td
+                    %h4 neonChat.refreshUserIds()
+                  %td.middle-align
+                    It will search all contacts in groups and create/open Chat History for contacts that already don't have.
+                    You will be likely to call this method when you manually add chat groups, or contacts to groups, but its not required if you use our predefined user/group management functions.
+                %tr
+                  %td
+                    %h4 neonChat.pushMessage(id, msg, from, time, fromOpponent, unread)
+                  %td.middle-align
+                    This function
+                    %code neonChat.pushMessage(id, msg, from, time, fromOpponent, unread)
+                    will broadcast the messages to contacts. It is used for both, sender and receiver. If you act as receiver, the attribute
+                    %code fromOpponent
+                    must be set to
+                    = succeed "." do
+                      %code true
+                    %br/
+                    %br/
+                    Attributes:
+                    %br/
+                    %br/
+                    %ul.list-unstyled.dist
+                      %li
+                        %span.label.label-default id
+                        \- Contact ID that will receive the message.
+                      %li
+                        %span.label.label-default msg
+                        \- The message text that will be sent.
+                      %li
+                        %span.label.label-default from
+                        \- The name of sender -
+                        %code string
+                        value.
+                      %li
+                        %span.label.label-default time
+                        \- Could be sent as
+                        %code new Date()
+                        object or time as string
+                        = succeed "." do
+                          %code 17:45
+                      %li
+                        %span.label.label-default fromOpponent
+                        \- Its a boolean attribute, that will mark the message that is being set as from receiver, also styled differently.
+                      %li
+                        %span.label.label-default unread
+                        \- This attribute will be used mostly when the previous attribute
+                        %code fromOpponent
+                        is true. This function attribute is set to true when you want a message to be marked as new message.
+                        If this attribute is set to
+                        %code true
+                        the number of unread messages will be updated.
+                    %br/
+                    %a{:href => "javascript:javascript:neonChat.showChat(false); neonChat.pushMessage('ui-id-1', 'This test message ' + (new Date().getTime()), 'Susan J. Best', new Date(), true, true); neonChat.renderMessages('ui-id-1', false);"}
+                      Try it! Send message to
+                      %strong Nicholas R. Walker
+                      as
+                      %strong Susan J. Best
+                    %br/
+                    %a{:href => "javascript:javascript:neonChat.showChat(false); neonChat.pushMessage('ui-id-1', 'This is reply to you buddy.' + (new Date().getTime()), 'Nicholas R. Walker', new Date(), false, false); neonChat.renderMessages('ui-id-1', false);"}
+                      Try it! Reply message to
+                      %strong Susan J. Best
+                      as
+                      %strong Nicholas R. Walker
+                    %br/
+                    %a{:href => "javascript:javascript:neonChat.showChat(false); neonChat.pushMessage('ui-id-5', 'Hello world ' + (new Date().getTime()), 'Daniel A. Pena', new Date(), true, true); neonChat.renderMessages('ui-id-5', false);"}
+                      Try it! Send message to
+                      %strong Robert J. Garcia
+                      as
+                      %strong Daniel A. Pena
+                    %br/
+                %tr#status-options
+                  %td
+                    %h4 neonChat.getStatus(user_id)
+                  %td.middle-align
+                    Get the current status of user which is selected by
+                    = succeed "." do
+                      %code user_id
+                    Will return
+                    %code status_id
+                    which can be fetched on
+                    = succeed "." do
+                      %code neonChat.statuses[status_id]
+                    %br/
+                    %br/
+                    The
+                    %code status
+                    object contains these properties i.e:
+                    = succeed "." do
+                      %code {class: 'is-online', order: 1, label: 'Online'}
+                %tr
+                  %td
+                    %h4 neonChat.setStatus(user_id, new_status)
+                  %td.middle-align
+                    Sets the user status which is selected by
+                    = succeed "." do
+                      %code user_id
+                    This will also update the CSS Style on contacts list. Available choices:
+                    %pre
+                      :preserve
+                        // Set online
+                        neonChat.setStatus(&quot;sample-user-123&quot;, &quot;online&quot;);
+                        
+                        // Set busy
+                        neonChat.setStatus(&quot;sample-user-123&quot;, &quot;busy&quot;);
+                        
+                        // Set away/idle
+                        neonChat.setStatus(&quot;sample-user-123&quot;, &quot;idle&quot;);
+                        
+                        // Set offline
+                        neonChat.setStatus(&quot;sample-user-123&quot;, &quot;offline&quot;);
+                        						                    %a{:href => "javascript:neonChat.showChat(false); neonChat.setStatus('sample-user-123', 'online');"}
+                      Try it! Set
+                      %strong online
+                      status for
+                      %strong Catherine J. Watkins
+                    %br/
+                    %a{:href => "javascript:neonChat.showChat(false); neonChat.setStatus('sample-user-123', 'busy');"}
+                      Try it! Set
+                      %strong busy
+                      status for
+                      %strong Catherine J. Watkins
+                    %br/
+                    %a{:href => "javascript:neonChat.showChat(false); neonChat.setStatus('sample-user-123', 'idle');"}
+                      Try it! Set
+                      %strong idle
+                      status for
+                      %strong Catherine J. Watkins
+                    %br/
+                    %a{:href => "javascript:neonChat.showChat(false); neonChat.setStatus('sample-user-123', 'offline');"}
+                      Try it! Set
+                      %strong offline
+                      status for
+                      %strong Catherine J. Watkins
+                    %br/
+                %tr
+                  %td
+                    %h4 neonChat.orderGroups()
+                  %td.middle-align
+                    If sorting is enabled (read
+                    = succeed ")" do
+                      %a{:href => "#chat-api-order-contacts"} here
+                    via
+                    %code data-order-by-status
+                    attribute, this function can be used to re-sort contacts inside groups. The sorting is determined with
+                    %strong Status Priority
+                    which can be set on
+                    %strong js/neon-chat.js
+                    on
+                    %code statues
+                    variable. Set
+                    %code order
+                    priority for each status. The statuses with lower number will be ordered to top.
+                %tr
+                  %td
+                    %h4 neonChat.countUnreadMessages(user_id)
+                  %td.middle-align
+                    Will calculate the total number of unread messages on chat history. If you specify the
+                    %code user_id
+                    (which is optional) it will return the unread messages for selected user.
+                %tr
+                  %td
+                    %h4 neonChat.createGroup(group_name, prepend)
+                  %td.middle-align
+                    Create new (blank) chat group. The
+                    %code group_name
+                    is required, while
+                    %code prepend
+                    is optional.
+                    %br/
+                    %br/
+                    Attributes:
+                    %br/
+                    %br/
+                    %ul.list-unstyled.dist
+                      %li
+                        %span.label.label-default group_name
+                        \- Group name that will be created.
+                      %li
+                        %span.label.label-default prepend
+                        \- If you set this to
+                        %strong true
+                        it will create the group as first entry on the chat groups, otherwise it will append to the bottom.
+                    %br/
+                    Returns
+                    %code group_id
+                    which can be used then to add, remove, or move contacts from/to this group.
+                    %br/
+                    %br/
+                    Sample Code:
+                    %pre var new_group_id = neonChat.createGroup('Party', true);
+                    %br/
+                    %a{:href => "javascript:return false;", :onclick => "neonChat.showChat(false); window.new_gr_id = neonChat.createGroup('Party', true); this.onclick = null;"} Try it! Create new group named "Party"
+                %tr
+                  %td
+                    %h4 neonChat.removeGroup(group_id, move_users_to_group)
+                  %td.middle-align
+                    Delete existing chat group. The
+                    %code group_id
+                    is required, while
+                    %code move_users_to_group
+                    is optional.
+                    %br/
+                    %br/
+                    Attributes:
+                    %br/
+                    %br/
+                    %ul.list-unstyled.dist
+                      %li
+                        %span.label.label-default group_id
+                        \- Group ID that will be deleted.
+                      %li
+                        %span.label.label-default move_users_to_group
+                        \- The current users of this group to place to another group id.
+                    %br/
+                    Sample Code:
+                    %pre neonChat.removeGroup('group-3', 'group-2');
+                    %br/
+                    %a{:href => "javascript: neonChat.showChat(false); neonChat.removeGroup('group-3', 'group-2');"} Try it! Delete group "Social" and place contact to "Work"
+                %tr
+                  %td
+                    %h4 neonChat.addUser(group_id, display_name, status, prepend, user_id)
+                  %td.middle-align
+                    Add user to specified group. The
+                    %code group_id
+                    is required, also
+                    %code display_name, status
+                    are required to init the user. Last two parameters
+                    %code prepend, user_id
+                    are optional.
+                    %br/
+                    %br/
+                    Attributes:
+                    %br/
+                    %br/
+                    %ul.list-unstyled.dist
+                      %li
+                        %span.label.label-default group_id
+                        \- Existing group ID to add the user
+                      %li
+                        %span.label.label-default display_name
+                        \- Display Name for this contact
+                      %li
+                        %span.label.label-default status
+                        \- Status for this user,
+                        = succeed "." do
+                          %a{:href => "#status-options"} see status options
+                      %li
+                        %span.label.label-default prepend
+                        \- (Optional) Wether to add this user to the top, or to the bottom. This option is valid if contact ordering is
+                        = succeed "." do
+                          %strong off
+                      %li
+                        %span.label.label-default user_id
+                        \- (Optional) By default if you don't specify this attribute, it will be automatically generated, or you can apply your desired id.
+                    %br/
+                    Returns
+                    %code user_id
+                    of newly created user. The equivalent method is
+                    %code neonChat.addUserId(group_id, user_id, display_name, status, prepend)
+                    which will require
+                    %code user_id
+                    to be set, if you are going to add contacts with IDs.
+                    %br/
+                    %br/
+                    Sample Code:
+                    %pre neonChat.addUser(group_id, 'John Doe 123', 'busy', true);
+                    %br/
+                    %a{:href => "javascript:neonChat.showChat(false);", :onclick => "neonChat.addUser(window.new_gr_id, 'John Doe ' + Math.round(Math.random() * 100), Math.round(Math.random() * 100)%2==0 ? 'online' : 'busy', true);"} Try it! Add user to "Party" Group (if this group exists)
+                %tr
+                  %td
+                    %h4 neonChat.getUser(user_id)
+                  %td.middle-align
+                    Will return user object by selecting it via
+                    = succeed "." do
+                      %code user_id
+                    The user object contains these properties:
+                    = succeed "." do
+                      %code {$el: $dom_element, messages: [], unreads: 2, status: 'online'}
+                %tr
+                  %td
+                    %h4 neonChat.moveUser(user_id, new_group_id, prepend)
+                  %td.middle-align
+                    Will move specific user to specific group. The
+                    %code user_id
+                    and
+                    %code new_group_id
+                    are required, while
+                    %code prepend
+                    is optional.
+                    %br/
+                    %br/
+                    Attributes:
+                    %br/
+                    %br/
+                    %ul.list-unstyled.dist
+                      %li
+                        %span.label.label-default user_id
+                        \- Existing user ID which is about to move
+                      %li
+                        %span.label.label-default new_group_id
+                        \- The group ID that will accept this user.
+                      %li
+                        %span.label.label-default prepend
+                        \- Set the user to the top of group. This option is valid if contact ordering is
+                        = succeed "." do
+                          %strong off
+                    %br/
+                    Sample Code:
+                    %pre neonChat.moveUser('sample-user-123', 'group-2', true);
+                    %br/
+                    %a{:href => "javascript:neonChat.showChat(false);", :onclick => "neonChat.moveUser('sample-user-123', 'group-2', true);"}
+                      Try it! Move
+                      %strong Catherine J. Watkins
+                      to
+                      %strong Work
+                      group.
+        / Footer
+        %footer.main
+          \&copy; 2014
+          %strong Neon
+          Admin Theme by
+          %a{:href => "http://laborator.co", :target => "_blank"} Laborator
+      #chat.fixed{"data-current-user" => "Art Ramadani", "data-max-chat-history" => "25", "data-order-by-status" => "1"}
+        .chat-inner
+          %h2.chat-header
+            %a.chat-close{"data-animate" => "1", :href => "#"}
+              %i.entypo-cancel
+            %i.entypo-users
+            Chat
+            %span.badge.badge-success.is-hidden 0
+          #group-1.chat-group
+            %strong Favorites
+            %a#sample-user-123{"data-conversation-history" => "#sample_history", :href => "#"}
+              %span.user-status.is-online
+              %em Catherine J. Watkins
+            %a{:href => "#"}
+              %span.user-status.is-online
+              %em Nicholas R. Walker
+            %a{:href => "#"}
+              %span.user-status.is-busy
+              %em Susan J. Best
+            %a{:href => "#"}
+              %span.user-status.is-offline
+              %em Brandon S. Young
+            %a{:href => "#"}
+              %span.user-status.is-idle
+              %em Fernando G. Olson
+          #group-2.chat-group
+            %strong Work
+            %a{:href => "#"}
+              %span.user-status.is-offline
+              %em Robert J. Garcia
+            %a{"data-conversation-history" => "#sample_history_2", :href => "#"}
+              %span.user-status.is-offline
+              %em Daniel A. Pena
+            %a{:href => "#"}
+              %span.user-status.is-busy
+              %em Rodrigo E. Lozano
+          #group-3.chat-group
+            %strong Social
+            %a{:href => "#"}
+              %span.user-status.is-busy
+              %em Velma G. Pearson
+            %a{:href => "#"}
+              %span.user-status.is-offline
+              %em Margaret R. Dedmon
+            %a{:href => "#"}
+              %span.user-status.is-online
+              %em Kathleen M. Canales
+            %a{:href => "#"}
+              %span.user-status.is-offline
+              %em Tracy J. Rodriguez
+        / conversation template
+        .chat-conversation
+          .conversation-header
+            %a.conversation-close{:href => "#"}
+              %i.entypo-cancel
+            %span.user-status
+            %span.display-name
+            %small
+          %ul.conversation-body
+          .chat-textarea
+            %textarea.form-control.autogrow{:placeholder => "Type your message"}
+      / Chat Histories
+      %ul#sample_history.chat-history
+        %li
+          %span.user Art Ramadani
+          %p Are you here?
+          %span.time 09:00
+        %li.opponent
+          %span.user Catherine J. Watkins
+          %p This message is pre-queued.
+          %span.time 09:25
+        %li.opponent
+          %span.user Catherine J. Watkins
+          %p Whohoo!
+          %span.time 09:26
+        %li.opponent.unread
+          %span.user Catherine J. Watkins
+          %p Do you like it?
+          %span.time 09:27
+      / Chat Histories
+      %ul#sample_history_2.chat-history
+        %li.opponent.unread
+          %span.user Daniel A. Pena
+          %p I am going out.
+          %span.time 08:21
+        %li.opponent.unread
+          %span.user Daniel A. Pena
+          %p Call me when you see this message.
+          %span.time 08:27
+    / Bottom Scripts
+    %script{:src => "assets/js/gsap/main-gsap.js"}
+    %script{:src => "assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"}
+    %script{:src => "assets/js/bootstrap.js"}
+    %script{:src => "assets/js/joinable.js"}
+    %script{:src => "assets/js/resizeable.js"}
+    %script{:src => "assets/js/neon-api.js"}
+    %script{:src => "assets/js/neon-chat.js"}
+    %script{:src => "assets/js/neon-custom.js"}
+    %script{:src => "assets/js/neon-demo.js"}

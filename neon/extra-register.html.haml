@@ -1,0 +1,111 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %meta{:content => "Neon Admin Panel", :name => "description"}/
+    %meta{:content => "", :name => "author"}/
+    %title Neon | Register
+    %link{:href => "assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/font-icons/entypo/css/entypo.css", :rel => "stylesheet"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic", :rel => "stylesheet"}/
+    %link{:href => "assets/css/bootstrap.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/neon-core.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/neon-theme.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/neon-forms.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/custom.css", :rel => "stylesheet"}/
+    %script{:src => "assets/js/jquery-1.11.0.min.js"}
+    /[if lt IE 9] <script src="assets/js/ie8-responsive-file-warning.js"></script>
+    / HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    /[if lt IE 9]
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  %body.page-body.login-page.login-form-fall{"data-url" => "http://neon.dev"}
+    / This is needed when you send requests via Ajax
+    :javascript
+      var baseurl = '';
+    .login-container
+      .login-header.login-caret
+        .login-content
+          %a.logo{:href => "index.html"}
+            %img{:alt => "", :src => "assets/images/logo@2x.png", :width => "120"}/
+          %p.description Create an account, it's free and takes few moments only!
+          / progress bar indicator
+          .login-progressbar-indicator
+            %h3 43%
+            %span logging in...
+      .login-progressbar
+        %div
+      .login-form
+        .login-content
+          %form#form_register{:method => "post", :role => "form"}
+            .form-register-success
+              %i.entypo-check
+              %h3 You have been successfully registered.
+              %p We have emailed you the confirmation link for your account.
+            .form-steps
+              #step-1.step.current
+                .form-group
+                  .input-group
+                    .input-group-addon
+                      %i.entypo-user
+                    %input#name.form-control{:autocomplete => "off", :name => "name", :placeholder => "Full Name", :type => "text"}/
+                .form-group
+                  .input-group
+                    .input-group-addon
+                      %i.entypo-phone
+                    %input#phone.form-control{:autocomplete => "off", "data-mask" => "phone", :name => "phone", :placeholder => "Phone Number", :type => "text"}/
+                .form-group
+                  .input-group
+                    .input-group-addon
+                      %i.entypo-calendar
+                    %input#birthdate.form-control{:autocomplete => "off", "data-mask" => "date", :name => "birthdate", :placeholder => "Date of Birth (DD/MM/YYYY)", :type => "text"}/
+                .form-group
+                  %button.btn.btn-primary.btn-block.btn-login{"data-step" => "step-2", :type => "button"}
+                    Next Step
+                    %i.entypo-right-open-mini
+                .form-group
+                  Step 1 of 2
+              #step-2.step
+                .form-group
+                  .input-group
+                    .input-group-addon
+                      %i.entypo-user-add
+                    %input#username.form-control{:autocomplete => "off", "data-is-regex" => "true", "data-mask" => "[a-zA-Z0-1\\.]+", :name => "username", :placeholder => "Username", :type => "text"}/
+                .form-group
+                  .input-group
+                    .input-group-addon
+                      %i.entypo-mail
+                    %input#email.form-control{:autocomplete => "off", "data-mask" => "email", :name => "email", :placeholder => "E-mail", :type => "text"}/
+                .form-group
+                  .input-group
+                    .input-group-addon
+                      %i.entypo-lock
+                    %input#password.form-control{:autocomplete => "off", :name => "password", :placeholder => "Choose Password", :type => "password"}/
+                .form-group
+                  %button.btn.btn-success.btn-block.btn-login{:type => "submit"}
+                    Complete Registration
+                    %i.entypo-right-open-mini
+                .form-group
+                  Step 2 of 2
+          .login-bottom-links
+            %a.link{:href => "extra-login.html"}
+              %i.entypo-lock
+              Return to Login Page
+            %br/
+            %a{:href => "#"} ToS
+            \-
+            %a{:href => "#"} Privacy Policy
+    / Bottom Scripts
+    %script{:src => "assets/js/gsap/main-gsap.js"}
+    %script{:src => "assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"}
+    %script{:src => "assets/js/bootstrap.js"}
+    %script{:src => "assets/js/joinable.js"}
+    %script{:src => "assets/js/resizeable.js"}
+    %script{:src => "assets/js/neon-api.js"}
+    %script{:src => "assets/js/jquery.validate.min.js"}
+    %script{:src => "assets/js/neon-register.js"}
+    %script{:src => "assets/js/jquery.inputmask.bundle.min.js"}
+    %script{:src => "assets/js/neon-custom.js"}
+    %script{:src => "assets/js/neon-demo.js"}
